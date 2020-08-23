@@ -1,0 +1,13 @@
+body{
+    background-color: lightgrey;
+    scroll-padding: none;
+    font-family: Tahoma, Regular;
+}
+
+.Prod{
+color: #246752;
+}
+
+.Market{
+    color: #58595b;
+}
