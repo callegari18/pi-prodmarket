@@ -1,0 +1,116 @@
+
+header div {
+    border: solid gray
+}
+main div {
+    border: solid gray;
+} 
+
+footer div {
+    border: solid;
+}
+
+ img  {
+    width: 300px;
+    padding:10px;
+    margin:2px;
+}
+
+#menu a {
+    display: inline;
+    font-family: Tahoma;  
+    color: #68b4a6;
+    text-decoration: none;
+    
+} 
+ #menu ul {
+    padding:10px;
+    margin:2px;
+    background-color:white;
+    list-style:none;
+    text-decoration: none;
+}
+
+ #menu ul li { 
+    display: inline-block; 
+}
+
+form {
+    padding:10px;
+    margin:2px;
+    border-color: #246752; 
+}
+
+
+ h1 {
+     font-style: normal;
+     padding:10px;
+     margin-bottom:2px;
+     font-family: Tahoma;
+     color: #68b4a6;
+     text-decoration: none;
+ } 
+ 
+ h1 .menu-hamburguer {
+    width: 35px;
+    height: 5px;
+    background-color: #68b4a6;
+    margin:2px;  
+    
+ }
+ h2 a {
+     padding:10px;
+     margin: 2px;
+     color:#808285;
+     text-decoration:none;
+     font-family:Tahoma;
+     font-size: 17px;
+     position: absolute;
+    }
+
+ h2 li {
+     list-style:none;
+ }
+
+ h2 img{
+     width: 30px ;
+     padding:10px;
+     margin: 2px;
+     position: relative;
+    
+ } 
+
+
+ 
+ h3 {
+    padding:10px;
+    margin: 2px;
+    color: #246752;
+    font-family:Tahoma;
+    font-size: 20px;
+ } 
+
+ h4 {
+     padding: 10px;
+     margin: 2px; 
+     font-family:Tahoma;
+     font-size: 15px ;
+     color: #68b4a6;
+ } 
+
+ h5{
+    padding:10px;
+    margin: 2px;
+    color: #246752;
+    font-family:Tahoma;
+    font-size: 20px 
+
+ }
+
+ h6{ 
+    padding: 10px;
+    margin: 2px; 
+    font-family:Tahoma;
+    font-size: 15px ;
+    color: #68b4a6;
+ }
