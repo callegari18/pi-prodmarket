@@ -1,13 +1,17 @@
 
 header div {
-    border: solid gray
+    border: white
 }
 main div {
-    border: solid gray;
+    border: white
 } 
 
 footer div {
-    border: solid;
+    border: white
+}
+
+footer {
+    text-align: center;
 }
 
  img  {
@@ -22,6 +26,7 @@ footer div {
     color: #68b4a6;
     text-decoration: none;
     
+    
 } 
  #menu ul {
     padding:10px;
@@ -29,10 +34,11 @@ footer div {
     background-color:white;
     list-style:none;
     text-decoration: none;
+
 }
 
- #menu ul li { 
-    display: inline-block; 
+ #menu ul li {  
+    display: inline-block;
 }
 
 form {
@@ -49,15 +55,19 @@ form {
      font-family: Tahoma;
      color: #68b4a6;
      text-decoration: none;
- } 
- 
- h1 .menu-hamburguer {
-    width: 35px;
-    height: 5px;
-    background-color: #68b4a6;
-    margin:2px;  
-    
- }
+ }  
+
+div.banner img {
+    position: relative;
+    left: 300px ;
+    bottom: 1020px ;
+    width: 75%;
+}
+
+div img .carroussel { 
+    flex-direction: row;
+}
+
  h2 a {
      padding:10px;
      margin: 2px;
