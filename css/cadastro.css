@@ -4,6 +4,10 @@ body{
     font-family: Tahoma, Regular;
 }
 
+.Cadastro {
+text-align: center;
+}
+
 .Prod{
 color: #246752;
 }
@@ -11,3 +15,5 @@ color: #246752;
 .Market{
     color: #58595b;
 }
+
+

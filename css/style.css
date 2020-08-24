@@ -26,7 +26,6 @@ body{
     margin-left: 50px;
     width: auto;
     height: auto;
-    border: 2px black solid;
     border-radius: 20px;
     
 }
@@ -37,7 +36,7 @@ body{
     
 }
 .formLogin{
-    border: 1px black solid;
+    border: 1px #246752 solid;
     height: auto; 
     text-align:center;
     margin-top: 100px;
@@ -54,3 +53,12 @@ body{
 a{
     color: #47967F;
 }
+
+button {
+    margin: auto;
+    padding: 5px 15px;
+    color: white;
+    background-color: #246752;
+    border-radius: 5px;
+    border: 0;
+  }
