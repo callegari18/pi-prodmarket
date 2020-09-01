@@ -20,7 +20,10 @@ body{
     margin-top: 50px;
     font-family: Tahoma;
 }
-
+container{
+    display: flex;
+    flex-wrap: wrap;
+}
 .box{
     margin-top: 100px;
     margin-left: 50px;
@@ -30,7 +33,8 @@ body{
     
 }
 .box img{
-    width: 100%; 
+    width: 100vw; 
+    max-width: 100%;
     border-radius: 20px;
 
     
@@ -61,4 +65,11 @@ button {
     background-color: #246752;
     border-radius: 5px;
     border: 0;
+  }
+
+  @media(max-width:375px){
+    .formLogin{
+        width: 100%;
+    }
+
   }
