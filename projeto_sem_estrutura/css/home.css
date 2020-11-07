@@ -3,22 +3,12 @@
     padding: 0;
     font-family: Tahoma;
 } 
-.middle {
-    background-color:#246752;
-    height: 5px;
-}
-strong {
+
+h1{
     color:#246752;
-    font-size: 20px
+    font-size: 30px;
+
 } 
-
-h1 {
-    color:#246752;
-    font-size: 40px;
-    height: auto;
-    width:auto
-}
-
 
 h2 { 
     color: #246752;
@@ -32,24 +22,6 @@ h3{
     font-size: 15px;
 }
 
-h4 {
-    color:#246752;
-    font-size: 20px;
-    margin-top:20px;
-    margin-bottom: 20px; 
-    font-weight: bold;
-    font-size:30px;
-
-}
-
-h5{
-    color:#246752;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size:30px;
-}
 
 body {
     background-color:whitesmoke;
@@ -68,7 +40,7 @@ main{
 .menuLateral {
     width: 100%;
     height: 700px;
-    overflow:auto;
+    overflow: auto;
 }
 
 .menuLateral ul img {
@@ -78,41 +50,32 @@ main{
 .menuLateral a {
     color:#808285;
     text-decoration:none;
-    font-size: 23px
 }
 .menuLateral img:hover {
     opacity: 0.85;
 } 
 
 
-#banner-institucional { 
-    cursor: pointer;
+.banner {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
 }
-
 
 .cartao {
     display: flex;
-    align-items:center; 
-    justify-content:space-around;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
-    height: auto;
-    margin-top: 25px;
-    
+    height: 300px;
 } 
 
-.card-produtor {
- background-color: white;
-}
 
-.card{
-    border : .1em solid #246752 ;
-    cursor : pointer;
-}
-.card-produtor img:hover{
+.card img:hover{
     opacity: 0.5;
 } 
 
-.card-produtor:hover {
+.card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
   } 
@@ -120,49 +83,64 @@ main{
 .cartao .btn {
     background-color: #68b4a6;
     color:#fff
-} 
-
-.card-deck { 
-    margin-top:15px ;
-} 
-
-.filter{
-    float: right;
 }
 
-.mais-produtores{
-    float: right;
-    margin-top:30px;
-    text-decoration:underline;
-    cursor:pointer;
-} 
-
-.information{
-    color: #246752
-} 
-
-.column-fornecedores{
-    float: left;
-    margin-top: 20px; 
-
-} 
-
-.column-fornecedores p {
-    color: #68b4a6;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 17px;
-}
-
-.column-transportadora {
-    float:right;
-    margin-top: 20px;
+.vitrine_primeira {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
     
-} 
 
-.column-transportadora p {
-    color: #68b4a6;
-    cursor:pointer;
-    text-decoration: underline;
-    font-size:17px;
+}
+.vitrine_primeira img:hover {
+    opacity: 0.5;
+}
+
+.vitrine_segunda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.vitrine_segunda img:hover {
+    opacity: 0.5;
+}
+
+.imgGrand {
+    width: auto;
+    height: 100%;
+    padding: 15px 15px 15px 0px;
+
+}
+
+.imgPeq {
+    width: 120px;
+    height: 100%;
+    padding: 15px;
+
+}
+
+.vitrine1 {
+    /* background-color: aqua; */
+    height: 240px;
+    width: 240px;
+    color: white;
+}
+
+.vitrine2 {
+    /* background-color: purple; */
+    height: 240px;
+    width: 240px;
+    color: white;
+}
+
+.vitrine3 {
+    /* background-color: rgb(42, 43, 43); */
+    height: 240px;
+    width: 240px;
+    color: white;
 }
