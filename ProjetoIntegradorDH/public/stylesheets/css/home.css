@@ -103,11 +103,11 @@ main{
 .card-produtor {
  background-color: white;
 }
-
 .card{
     border : .1em solid #246752 ;
     cursor : pointer;
 }
+
 .card-produtor img:hover{
     opacity: 0.5;
 } 
