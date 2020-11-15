@@ -25,8 +25,9 @@ container{
     flex-wrap: wrap;
 }
 .box{
-    margin-top: 100px;
+    margin-top: 0px;
     margin-left: 50px;
+    margin-bottom: 50px;
     width: auto;
     height: auto;
     border-radius: 20px;
@@ -43,8 +44,9 @@ container{
     border: 1px #246752 solid;
     height: auto; 
     text-align:center;
-    margin-top: 100px;
+    margin-top: 0px;
     margin-left: 20px;
+    margin-bottom: 50px;
     padding-top: 50px;
     border-radius: 20px;
     font-family: Tahoma;

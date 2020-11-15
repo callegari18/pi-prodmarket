@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="/stylesheets/css/cadastro.css"> -->
-    <title>Cadastro-ProdMarket</title>
-</head>
-
-<body>
-    <div class="container">
-        <header>
-
-
-        </header>
+<%- include('partials/header.ejs'); %>
 
         <h1 class="Cadastro">Cadastro de Usuário <span class="Prod">Prod</span><span class="Market">Market</span></h1>
         <hr>
@@ -145,13 +129,5 @@
             </div>
 
         </form>
-    </div>
 
-    <footer>
-        <%- include('partials/rodape.ejs'); %>
-    </footer>
-    <script src="/stylesheets/js/jquery.js"></script>
-    <script src="/stylesheets/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+        <%- include('partials/footer.ejs'); %>
