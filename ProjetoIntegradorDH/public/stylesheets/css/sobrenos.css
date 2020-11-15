@@ -1,51 +1,18 @@
-
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    color: #68b4a6;
-    height: 700px;
-    text-align: justify;
-    font-style: normal;
-    width: auto;
-     border: 15px #68b4a6;
-     padding: auto;
-     margin-right: 40px;
-     margin: 25px;
-     background-color: lightgrey;
-}
-    
-    
-}
-h2{
+h2 tituloSobre{
     font-size: 20px;
     color: #68b4a6;
     font-style: bold;
-    margin-left: 40px;
+    text-align: center;
 }
 
 
-h3{
-    font-size: 18px;
-    color: #68b4a6;
-    font-style: bold;
-    margin-left: 40px;
-}
-
-
-p{
+p pSobre{
     font-size: 16px;
     color: #68b4a6;
     margin-left: 70px;
     margin-right: 500px;
 }
 
-ul{
+ul ulSobre{
     color: #68b4a6;
-}
-img{
-    margin-right: auto;
-}
-
-imgbox{
-    margin-right: 80;
 }

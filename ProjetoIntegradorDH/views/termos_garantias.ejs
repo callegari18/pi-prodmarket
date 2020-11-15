@@ -1,48 +1,24 @@
 
-<body>
-    <header>
-      
-        <div class="menu">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ajuda</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Sobre nós</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contato</a>
-                </li>
-              </ul>
-        </div>
 
-    </header>
+
+     <%- include('partials/header.ejs'); %>
+
     <main>
          
-          <img alt="" src="img/logo-prod_market.png" class="flex-container" style="float:right" width="400" />
+         
         
 
-          <container>
+        
           <h2>TERMOS E GARANTIAS</h2>
-          <hr width="2" size="100%">
+          
 
-            <p>Prezado Cliente,</p>
+          <p>Prezado Cliente,</container</p>
 
             <p>Este termo tem como objetivo garantir pelo período de 1 (um) ano, (90 (noventa) dias de prazo determinado por lei e 275
                 (duzentos e setenta e cinco) dias de garantia adicional concedida pela ProdMarket) a contar da data de emissão da Nota Fiscal de venda e
                 conforme condições descritas abaixo, a qualidade do produto contra defeitos de fabricação que venham a afetar a integridade física e/ou o
                 funcionamento do mesmo, durante este período, será submetida sem ônus para o cliente, todas as peças e componentes que apresentarem
-                defeitos comprovados de projeto e/ou fabricação.<p/>
+                defeitos comprovados de projeto e/ou fabricação.</p>
 
             <p><strong> 1. DA GARANTIA</strong></p>
 
@@ -103,21 +79,9 @@
 
             <p>4.3 Manutenções periódica e/ou preventiva e ajustes são de responsabilidade do cliente e não são cobertas pela garantia.</p>
           
-        </conteiner>
+
     </main>
-    <footer>
+     
 
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+    <%- include('partials/footer.ejs'); %>
