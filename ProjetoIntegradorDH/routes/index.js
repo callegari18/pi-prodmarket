@@ -28,7 +28,6 @@ router.get('/login', function(req, res, next) {
   res.render('login')
 });
 
-
 router.get('/parceiros', function(req, res, next) {
   res.render('parceiros')
 });
@@ -40,5 +39,18 @@ router.get('/sobrenos', function(req, res, next) {
 router.get('/seguranca', function(req, res, next) {
   res.render('seguranca_privacidade')
 });
+
+router.get('/termos', function(req, res, next) {
+  res.render('termos_garantias')
+});
+
+router.get('/faq', function(req, res, next) {
+  res.render('faq')
+});
+
+router.get('/produto', function(req, res, next) {
+  res.render('produto')
+});
+
 
 module.exports = router;
