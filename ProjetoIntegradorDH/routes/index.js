@@ -52,5 +52,14 @@ router.get('/produto', function(req, res, next) {
   res.render('produto')
 });
 
+router.get('/produtores', function(req, res, next) {
+  res.render('produtores')
+});
+router.get('/produtor', function(req, res, next) {
+  res.render('produtor')
+});
+router.get('/carrinho', function(req, res, next) {
+  res.render('carrinho')
+});
 
 module.exports = router;

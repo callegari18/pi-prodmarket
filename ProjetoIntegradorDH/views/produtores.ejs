@@ -1,104 +1,50 @@
+<%- include('partials/header.ejs'); %>
 
-<body>
-    <div class="container">
-        <div class="heading">
+        <div class="heading tituloProdutor">
           <h1>Produtores</h1>
         </div>
         <hr class="middle" />
+        <!-- inicio cards -->
         <div class="row">
-          <div class="card">
-            <div class="card-header">
-              <h1>Produtor 1</h1>
+          <div class="cartao">
+            <!-- card-1 -->
+            <div class="card-produtor" style="width: 11rem">
+              <img
+                src="/images/img/produtor-1.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2 class="card-title">Fazenda Novo Horizonte</h2>
+                <a href="#" class="btn">Saiba mais</a>
+              </div>
             </div>
-            <div class="card-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-              </p>
-              <a href="#" class="btn">Saiba mais</a>
+            <!-- card-2 -->
+            <div class="card-produtor" style="width: 11rem">
+              <img
+                src="/images/img/produtor-2.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2 class="card-title">Chacara Sol Nascente</h2>
+                <a href="#" class="btn">Saiba mais</a>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h1>Produtor 2</h1>
+            <!-- card-3 -->
+            <div class="card-produtor" style="width: 11rem">
+              <img
+                src="/images/img/produtor-3.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2 class="card-title">Fazenda Nova Gaia</h2>
+                <a href="#" class="btn">Saiba mais</a>
+              </div>
             </div>
-            <div class="card-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-              </p>
-              <a href="#" class="btn">Saiba mais</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h1>Produtor 3</h1>
-            </div>
-            <div class="card-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-              </p>
-              <a href="#" class="btn">Saiba mais</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h1>Produtor 4</h1>
-            </div>
-            <div class="card-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-              </p>
-              <a href="#" class="btn">Saiba mais</a>
-            </div>
-          </div>
+          </div> 
         </div>
-        <div class="row">
-            <div class="card">
-              <div class="card-header">
-                <h1>Produtor 5</h1>
-              </div>
-              <div class="card-body">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-                </p>
-                <a href="#" class="btn">Saiba mais</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <h1>Produtor 6</h1>
-              </div>
-              <div class="card-body">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-                </p>
-                <a href="#" class="btn">Saiba mais</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <h1>Produtor 7</h1>
-              </div>
-              <div class="card-body">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-                </p>
-                <a href="#" class="btn">Saiba mais</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <h1>Produtor 8</h1>
-              </div>
-              <div class="card-body">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-                </p>
-                <a href="#" class="btn">Saiba mais</a>
-              </div>
-            </div>
-          </div>
-      </div>
-</body>
-
-
-</html>
+        
+        <!-- fim cards -->
+          <%- include('partials/footer.ejs'); %>

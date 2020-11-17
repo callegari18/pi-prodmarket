@@ -1,4 +1,4 @@
-a {
+a.button-product {
     color: white;
     background-color: #246752;
     border: 1px solid  #246752 ;
@@ -13,7 +13,7 @@ a {
     cursor:default;
 } 
 
-a:hover {
+a.button-product:hover {
  text-decoration: none;
 } 
 
