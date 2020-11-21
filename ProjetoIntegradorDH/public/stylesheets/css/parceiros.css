@@ -1,19 +1,27 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Tahoma;
+
+  .container-parceiros {
+    width: 100%;
+    margin: 20px auto;
+   }
+
+  .column-forn{
+    margin-left: 30px;
+    width: 50%;
+    padding:20px;
+    display: inline-block;
   }
-  
-  body {
-    background: #fefefe;
-    font-family: sans-serif;
+
+  .column-transp{
+    width: 50%;
+    padding:20px;
+    display: inline-block;
   }
-  
-  .container {
-    width: 90%;
-    margin: 50px auto;
+
+  .middle {
+    background-color:#246752;
+    height: 3px;
   }
+
   .heading {
     text-align: left;
     font-size: 30px;

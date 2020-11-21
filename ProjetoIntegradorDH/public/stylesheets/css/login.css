@@ -1,66 +1,57 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  .selector-for-some-widget {
-    box-sizing: content-box;
-  }
-body{
-    background-color: lightgrey;
-    scroll-padding: none;
-}
-
 .menu{
     margin-top: 50px;
     font-family: Tahoma;
 }
-container{
-    display: flex;
+.container-login{
+    display: block;
     flex-wrap: wrap;
 }
 .box{
-    margin-top: 0px;
-    margin-left: 50px;
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-left: 30px;
     width: auto;
     height: auto;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     
-}
-.box img{
-    width: 100vw; 
-    max-width: 100%;
+  }
+  .box img{
+    height: 100%; 
     border-radius: 20px;
-
+  
     
-}
-.formLogin{
+  }
+  .form-login{
     border: 1px #246752 solid;
-    height: auto; 
-    text-align:center;
-    margin-top: 0px;
+    width: 100%; 
+    text-align:left;
+    margin-top: 10px;
     margin-left: 20px;
-    margin-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 20px;
     border-radius: 20px;
     font-family: Tahoma;
     color: #47967F;
-}
-.formLogin h2{
+  }
+  .form-login h2{
     color: #246752;
+    font-size: 16px;
+    padding-bottom: 20px;
    
-}
-a{
-    color: #47967F;
-}
-
-button {
+  }
+  
+  .input-login{
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #dddddd;
+    border: 0;
+  }
+  
+  button {
     margin: auto;
     padding: 5px 15px;
     color: white;
@@ -70,7 +61,8 @@ button {
   }
 
   @media(max-width:375px){
-    .formLogin{
+
+    .form-Login{
         width: 100%;
     }
 

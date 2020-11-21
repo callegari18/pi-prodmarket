@@ -15,6 +15,77 @@ body {
   font-family: Tahoma, regular;
 }
 
+/* Estilos Globais */
+
+a{
+    color: #47967F;
+}
+
+h1 {
+    color:#246752;
+    font-size: 40px;
+    height: auto;
+    width:auto
+}
+
+h2 { 
+    color: #246752;
+    font-family:Tahoma;
+    font-size: 20px;
+} 
+
+h3{
+    color: #68b4a6;
+    font-family:Tahoma;
+    font-size: 15px;
+}
+
+h4 {
+    color:#246752;
+    font-size: 20px;
+    margin-top:20px;
+    margin-bottom: 20px; 
+    font-weight: bold;
+    font-size:30px;
+
+}
+
+h5{
+    color:#246752;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size:30px;
+}
+
+.menu{
+    margin-top: 50px;
+    font-family: Tahoma;
+}
+  
+.menu a{
+    color: #246752;
+}
+  
+.menu a :hover{
+    color: #CCE7D3;
+}
+  
+.middle {
+    background-color:#246752;
+    height: 5px;
+}
+
+button {
+    margin: auto;
+    padding: 5px 15px;
+    color: white;
+    background-color: #246752;
+    border-radius: 5px;
+    border: 0;
+}
+
 /* Footer */
 
 #myFooter {
@@ -128,27 +199,23 @@ body {
 
 .Cadastro {
   text-align: center;
-  }
+}
   
-  .Prod{
+.Prod{
   color: #246752;
-  }
+}
   
-  .Market{
+.Market{
       color: #58595b;
-  }
+}
   
   /* Login */
 
-  .selector-for-some-widget {
+.selector-for-some-widget {
     box-sizing: content-box;
-  }
-
-.menu{
-    margin-top: 50px;
-    font-family: Tahoma;
 }
-container{
+
+.container_login{
     display: flex;
     flex-wrap: wrap;
 }
@@ -184,74 +251,25 @@ container{
     color: #246752;
    
 }
-a{
-    color: #47967F;
-}
-
-button {
-    margin: auto;
-    padding: 5px 15px;
-    color: white;
-    background-color: #246752;
-    border-radius: 5px;
-    border: 0;
-  }
 
   @media(max-width:375px){
     .formLogin{
         width: 100%;
     }
 
-  }
-
-  /* Home */
-
-  .middle {
-    background-color:#246752;
-    height: 5px;
 }
+
+/* Home */
+
+.container_home{
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
 strong {
     color:#246752;
     font-size: 20px
 } 
-
-h1 {
-    color:#246752;
-    font-size: 40px;
-    height: auto;
-    width:auto
-}
-
-h2 { 
-    color: #246752;
-    font-family:Tahoma;
-    font-size: 20px;
-} 
-
-h3{
-    color: #68b4a6;
-    font-family:Tahoma;
-    font-size: 15px;
-}
-
-h4 {
-    color:#246752;
-    font-size: 20px;
-    margin-top:20px;
-    margin-bottom: 20px; 
-    font-weight: bold;
-    font-size:30px;
-
-}
-
-h5{
-    color:#246752;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size:30px;
-}
 
 .logoMenu {
     width: 250px;
@@ -299,6 +317,7 @@ main{
 .card-produtor {
  background-color: white;
 }
+
 .card{
     border : .1em solid #246752 ;
     cursor : pointer;
@@ -363,14 +382,9 @@ main{
     font-size:17px;
 }
 
-.container{
-    background-color: whitesmoke;
-    padding: 20px;
-}
-
 /* Parceiros */
 
-.container {
+.container_parceiros {
   width: 90%;
   margin: 50px auto;
 }
@@ -431,7 +445,7 @@ main{
 }
 
 @media screen and (max-width: 620px) {
-  .container {
+  .container_home {
     width: 100%;
   }
 
@@ -450,30 +464,7 @@ main{
 .selector-for-some-widget {
   box-sizing: content-box;
 }
-body{
-  background-color: lightgrey;
-  scroll-padding: none;
-  font-family: Tahoma;
-}
 
-.menu{
-  margin-top: 50px;
-  font-family: Tahoma;
-}
-
-.menu a{
-  color: #246752;
-}
-
-.menu a :hover{
-  color: #CCE7D3;
-}
-
-.middle {
-  background-color:#246752;
-  height: 5px;
-}
- 
 .formFaq{
   border: 1px #246752 solid;
   height: auto; 
@@ -484,28 +475,6 @@ body{
   border-radius: 20px; 
   font-family: Tahoma;
   color: #47967F;
-}
-
- h2{
-  color: #246752;
- 
-}
-
-button {
-  margin: auto;
-  padding: 5px 15px;
-  color: white;
-  background-color: #246752;
-  border-radius: 5px;
-  border: 0;
-}
-h1{
-  color: #246752;
-}
-
-h4{
-  color: #246752;
-  
 }
 
 .Perguntas{
@@ -542,19 +511,6 @@ ul ulSobre{
 
 /* Contato */
 
-.menu{
-  margin-top: 50px;
-  font-family: Tahoma;
-}
-
-.menu a{
-  color: #246752;
-}
-
-.menu a :hover{
-  color: #CCE7D3;
-}
-
 .box{
   margin-top: 100px;
   margin-left: 50px;
@@ -585,37 +541,13 @@ ul ulSobre{
  
 }
 
-button {
-  margin: auto;
-  padding: 5px 15px;
-  color: white;
-  background-color: #246752;
-  border-radius: 5px;
-  border: 0;
-}
-
 /* Carrinho */
 
-.middle {
-  background-color:#246752;
-  height: 5px;
-}
-
-.container {
-  width: 90%;
-  margin: 50px auto;
-}
 .heading {
   text-align: left;
   font-size: 30px;
   margin-bottom: 50px;
   color: #246752;
-}
-
-a {
-border: 0 none;
-outline: 0;
-text-decoration: none;
 }
 
 strong {
@@ -625,22 +557,6 @@ font-weight: bold;
 
 p {
 margin: 0.75rem 0 0;
-}
-
-h1{
-  
-  color: #246752;
-  font-size: 40px;
-  height: auto;
-  width: auto;
-}
-
-h2 {
-font-size: 0.75rem;
-font-weight: normal;
-margin: 0;
-padding: 0;
-color: #246752;
 }
 
 input,
@@ -692,7 +608,7 @@ content: 'R$';
 display: none;
 }
 
-main {
+.cont-carrinho {
 clear: both;
 font-size: 0.75rem;
 margin: 0 auto;

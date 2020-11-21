@@ -171,3 +171,10 @@ main{
     background-color: whitesmoke;
     padding: 20px;
 }
+
+.container-header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

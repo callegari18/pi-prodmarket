@@ -48,14 +48,14 @@
 }
 
 #myFooter a {
-    color: #d2d1d1;
+    color: #246752;
     text-decoration: none;
 }
 
 #myFooter a:hover,
 #myFooter a:focus {
     text-decoration: none;
-    color: white;
+    color:  grey;
 }
 
 #myFooter .social-networks {

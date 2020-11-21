@@ -20,3 +20,24 @@ a.button-product:hover {
 a.button-product:hover{
     color: white;
 }
+
+
+.card-produto {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.text-produto {
+    text-align: left;
+}
+
+.card-header-produto {
+    text-align: center;
+    padding: 15px 10px;
+    background: #68b4a6;
+    color: #fff;
+}

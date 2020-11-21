@@ -12,10 +12,11 @@
 
   .middle {
     background-color:#246752;
-    height: 5px;
+    height: 3px;
+    width: 100%;
 }
   
-  .container {
+  .container-carrinho {
     width: 90%;
     margin: 50px auto;
   }
