@@ -1,0 +1,25 @@
+body{
+    background-color: lightgrey;
+    scroll-padding: none;
+    font-family: Tahoma, Regular;
+}
+
+.Cadastro {
+text-align: center;
+}
+
+.Prod{
+color: #246752;
+}
+
+.Market{
+    color: #58595b;
+}
+
+.form-user{
+    padding: 40px;
+}
+
+.form-prod{
+    padding: 40px;
+}

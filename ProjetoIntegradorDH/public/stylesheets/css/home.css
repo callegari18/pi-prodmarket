@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+} 
+.middle {
+    background-color:#246752;
+    height: 5px;
+}
+strong {
+    color:#246752;
+    font-size: 20px
+} 
+
+h1 {
+    color:#246752;
+    font-size: 40px;
+    height: auto;
+    width:auto
+}
+
+
+h2 { 
+    color: #246752;
+    font-family:Tahoma;
+    font-size: 20px;
+} 
+
+h3{
+    color: #68b4a6;
+    font-family:Tahoma;
+    font-size: 15px;
+}
+
+h4 {
+    color:#246752;
+    font-size: 20px;
+    margin-top:20px;
+    margin-bottom: 20px; 
+    font-weight: bold;
+    font-size:30px;
+
+}
+
+h5{
+    color:#246752;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size:30px;
+}
+
+body {
+    background-color:whitesmoke;
+}
+
+.logoMenu {
+    width: 250px;
+    height: auto;
+    margin-right: 150px ;
+}
+
+main{
+    margin-top: 30px;
+}
+
+.menuLateral {
+    width: 100%;
+    height: 700px;
+    overflow:auto;
+}
+
+.menuLateral ul img {
+    width: 35px;
+    height: auto;
+}
+.menuLateral a {
+    color:#808285;
+    text-decoration:none;
+    font-size: 23px
+}
+.menuLateral img:hover {
+    opacity: 0.85;
+} 
+
+
+#banner-institucional { 
+    cursor: pointer;
+}
+
+
+.cartao {
+    display: flex;
+    align-items:center; 
+    justify-content:space-around;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    
+} 
+
+.card-produtor {
+ background-color: white;
+}
+.card{
+    border : .1em solid #246752 ;
+    cursor : pointer;
+}
+
+.card-produtor img:hover{
+    opacity: 0.5;
+} 
+
+.card-produtor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  } 
+
+.cartao .btn {
+    background-color: #68b4a6;
+    color:#fff
+} 
+
+.card-deck { 
+    margin-top:15px ;
+} 
+
+.filter{
+    float: right;
+}
+
+.mais-produtores{
+    float: right;
+    margin-top:30px;
+    text-decoration:underline;
+    cursor:pointer;
+} 
+
+.information{
+    color: #246752
+} 
+
+.column-fornecedores{
+    float: left;
+    margin-top: 20px; 
+
+} 
+
+.column-fornecedores p {
+    color: #68b4a6;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.column-transportadora {
+    float:right;
+    margin-top: 20px;
+    
+} 
+
+.column-transportadora p {
+    color: #68b4a6;
+    cursor:pointer;
+    text-decoration: underline;
+    font-size:17px;
+}
+
+.container{
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.container-header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
