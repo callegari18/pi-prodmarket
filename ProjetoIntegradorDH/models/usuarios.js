@@ -25,12 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     codigo_as: DataTypes.STRING,
     codigo_natureza: DataTypes.STRING,
     telefone: DataTypes.STRING,
-    cep: DataTypes.STRING,
     email: DataTypes.STRING,
-    estado: DataTypes.STRING,
     responsavel: DataTypes.STRING,
-    endereco:DataTypes.STRING,
-    complemento: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Usuarios',
