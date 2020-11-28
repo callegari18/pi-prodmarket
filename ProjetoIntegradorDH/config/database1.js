@@ -1,7 +1,7 @@
 module.exports = {
   username: 'root',
   password: '0709',
-  database: 'cadastro',
+  database: 'prodmarket',
   host: '127.0.0.1',
   dialect: 'mysql',
 }
