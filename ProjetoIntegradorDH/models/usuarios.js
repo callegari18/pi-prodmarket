@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const database = require('../config/database');
 module.exports = (sequelize, DataTypes) => {
   class Usuarios extends Model {
     /**
@@ -24,8 +25,12 @@ module.exports = (sequelize, DataTypes) => {
     codigo_as: DataTypes.STRING,
     codigo_natureza: DataTypes.STRING,
     telefone: DataTypes.STRING,
+    cep: DataTypes.STRING,
     email: DataTypes.STRING,
-    responsavel: DataTypes.STRING
+    estado: DataTypes.STRING,
+    responsavel: DataTypes.STRING,
+    endereco:DataTypes.STRING,
+    complemento: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Usuarios',
