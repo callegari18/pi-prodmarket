@@ -3,16 +3,14 @@
         <h1 class="Cadastro">Cadastro de Usuário <span class="Prod">Prod</span><span class="Market">Market</span></h1>
         <hr>
 
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form class="form-user" action="#" method="post" enctype="multipart/form-data">
 
-            <div class="form-group col-md-12">
-                <div class="form-check">
-                    <input type="checkbox" id="checkComprar" name="checkComprar" value="Comprar">
-                    <label for="checkComprar"> Comprar</label> <br>
+            <div class="form-group form-check col-md-12">
+                    <input type="checkbox" class="form-check-input" id="checkComprar" name="checkComprar" value="Comprar">
+                    <label class="form-check-label" for="checkComprar"> Comprar</label>
                     
-                    <input type="checkbox" id="checkVender" name="checkVender" value="Vender">
-                    <label for="checkVender"> Vender</label>
-                </div>
+                    <input type="checkbox" class="form-check-input" id="checkVender" name="checkVender" value="Vender">
+                    <label class="form-check-label" for="checkVender"> Vender</label>
             </div>
 
             <div class="form-row">
@@ -120,7 +118,15 @@
                     <label for="input">Complemento</label>
                     <input type="text" class="form-control" placeholder="Número / Bloco">
                 </div>
-
+            
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="inputImagem">Cadastrar Imagem <br>( Tamanho mínimo 400x400px, formato JPG, máximo 07
+                            imagens
+                            )</label>
+                    <input type="file" id="inputImagem" name="myfile" multiple>
+                </div>
+            </div>
 
             </div>
 

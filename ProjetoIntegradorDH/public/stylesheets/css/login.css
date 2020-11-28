@@ -34,7 +34,7 @@
     padding-top: 20px;
     border-radius: 20px;
     font-family: Tahoma;
-    color: #47967F;
+    color: #246752;
   }
   .form-login h2{
     color: #246752;
@@ -43,6 +43,10 @@
    
   }
   
+  .form-login a{
+    color: #246752;
+    text-decoration: underline;
+  }
   .input-login{
     display: block;
     margin-bottom: 10px;
@@ -50,7 +54,7 @@
     background-color: #dddddd;
     border: 0;
   }
-  
+
   button {
     margin: auto;
     padding: 5px 15px;
