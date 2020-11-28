@@ -13,7 +13,7 @@ router.get('/contato', function(req, res, next) {
 
 router.get('/cadastro_usuario',  UsuarioController.create);
 
-router.post('/cadastro_usuario', UsuarioController.store);
+router.post('/cadastro_usuario', UsuarioController.guardar);
 
 router.get('/cadastro_produto', function(req, res, next) {
   res.render('cadastro_produto')
