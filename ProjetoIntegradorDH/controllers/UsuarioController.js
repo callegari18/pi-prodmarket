@@ -1,4 +1,4 @@
-const {Usuario} = require('../models/usuarios');
+const {usuarios, endereco} = require('../models');
 const Sequelize = require('sequelize');
 
 const UsuarioController = {
@@ -8,20 +8,21 @@ const UsuarioController = {
     store: async (rec, res)=>{
         const{  tipo,
                 nome,
-                nome_fantasia,
                 titulo,
                 cnpj,
                 ie,
+                nome_fantasia,
                 ramo,
                 codigo_ap,
                 codigo_as,
                 codigo_natureza,
-                responsavel,
                 telefone,
+                email,
+                responsavel,
                 senha
         } = req.body;
 
-        const resultado = await Usuario.create({
+        const resultado = await usuarios.create({
             tipo,
             nome,
             nome_fantasia,
