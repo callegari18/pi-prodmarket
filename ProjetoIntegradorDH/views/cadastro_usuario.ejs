@@ -3,82 +3,85 @@
         <h1 class="Cadastro">Cadastro de Usuário <span class="Prod">Prod</span><span class="Market">Market</span></h1>
         <hr>
 
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form class="form-user" action="#" method="post" enctype="multipart/form-data">
 
-            <div class="form-group col-md-12">
-                <div class="form-check">
-                    <input type="checkbox" id="checkComprar" name="checkComprar" value="Comprar">
-                    <label for="checkComprar"> Comprar</label> <br>
+            <div class="form-group form-check col-md-12">
+                    <input type="checkbox" class="form-check-input" id="checkComprar" name="checkComprar" value="Comprar">
+                    <label class="form-check-label" for="checkComprar"> Comprar</label>
                     
-                    <input type="checkbox" id="checkVender" name="checkVender" value="Vender">
-                    <label for="checkVender"> Vender</label>
-                </div>
+                    <input type="checkbox" class="form-check-input" id="checkVender" name="checkVender" value="Vender">
+                    <label class="form-check-label" for="checkVender"> Vender</label>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputAddress">Nome Empresarial</label>
-                    <input type="text" class="form-control" id="inputNome" placeholder="Nome">
+                    <label for="nome">Nome Empresarial</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="inputAddress2">Titulo do Estabelecimento (Nome de Fantasia) </label>
-                    <input type="text" class="form-control" id="inputNomefantasia" placeholder="Nome de Fantasia">
+                    <label for="titulo">Titulo do Estabelecimento (Nome de Fantasia) </label>
+                    <input type="text" class="form-control" id="titulo" name="tipo" placeholder="Nome de Fantasia">
                 </div>
 
             </div>
 
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputEmail4">CNPJ</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="Digite o CNPJ">
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">Ramo de Atividade</label>
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="Atividade Empresarial">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputAddress">Código e Descição da Atividade Econômica Principal</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Atividade Principal">
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label for="inputAddress2">Código e Descição da Atividade Econômica Secundária</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Atividade Secundária">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputAddress2">Codigo e Descição da Natureza Jurídica</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Natureza Jurídica">
+                <div class="form-group col-md-4">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Digite o CNPJ">
                 </div>
 
                 <div class="form-group col-md-4">
-                    <label for="inputAddress">Nome do Responsável</label>
-                    <input type="text" class="form-control" placeholder="Insira seu nome">
+                    <label for="ie">Incrição Estadual</label>
+                    <input type="text" class="form-control" id="ie" name="ie" placeholder="Digite a Inscrição Estadual">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="ramo">Ramo de Atividade</label>
+                    <input type="text" class="form-control" id="ramo-user" name="ramo" placeholder="Atividade Empresarial">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="codigo_ap">Código e Descição da Atividade Econômica Principal</label>
+                    <input type="text" class="form-control" id="codigo_ap" name="codigo_ap" placeholder="Atividade Principal">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="codigo_as">Código e Descição da Atividade Econômica Secundária</label>
+                    <input type="text" class="form-control" id="codigo_as" name="codigo_as" placeholder="Atividade Secundária">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="codigo_natureza">Codigo e Descição da Natureza Jurídica</label>
+                    <input type="text" class="form-control" id="codigo_natureza" name="codigo_natureza" placeholder="Natureza Jurídica">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="responsavel">Nome do Responsável</label>
+                    <input type="text" class="form-control" id="responsavel" name="responsavel" placeholder="Insira seu nome">
                 </div>
 
                 <div class="form-group col-md-2">
-                    <label for="inputAddress">Telefone</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="99999-9999">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="99999-9999">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group col-md-2">
-                    <label for="">Informe o CEP</label>
-                    <input type="text" class="form-control" placeholder="CEP">
+                    <label for="cep">Informe o CEP</label>
+                    <input type="text" class="form-control" id="cep" name="cep" placeholder="CEP">
                 </div>
 
                 <div class="form-group col-md-2">
-                    <label for="input" class="col-sm-2 control-label">Estado</label>
+                    <label for="estado" class="col-sm-2 control-label">Estado</label>
                     <div class="col-auto">
-                        <select name="" id="input" class="form-control">
+                        <select name="estado" id="estado" class="form-control">
 
                             <option value="ac">Acre</option>
                             <option value="al">Alagoas</option>
@@ -112,15 +115,28 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="input">Lograduro</label>
-                    <input type="text" class="form-control" placeholder="Digite o Endereço">
+                    <label for="endereco">Lograduro</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Digite o Endereço">
                 </div>
 
                 <div class="form-group col-md-2">
-                    <label for="input">Complemento</label>
-                    <input type="text" class="form-control" placeholder="Número / Bloco">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Número / Bloco">
                 </div>
 
+                <div class="form-group col-md-5">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Cadastre sua Senha">
+                </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-7">
+                    <label for="inputImagem">Cadastrar Imagem <br>( Tamanho mínimo 400x400px, formato JPG, máximo 07
+                            imagens
+                            )</label>
+                    <input type="file" id="inputImagem" name="myfile" multiple>
+                </div>
+            </div>
 
             </div>
 
