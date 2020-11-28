@@ -11,12 +11,9 @@ router.get('/contato', function(req, res, next) {
   res.render('contato')
 });
 
-router.get('/cadastro_usuario', function(req, res, next) {
-  res.render('cadastro_usuario', UsuarioController.create)
-});
-router.post('/cadastro_usuario', function(req, res, next) {
-  res.render('cadastro_usuario', UsuarioController.store)
-});
+router.get('/cadastro_usuario',  UsuarioController.create);
+
+router.post('/cadastro_usuario', UsuarioController.store);
 
 router.get('/cadastro_produto', function(req, res, next) {
   res.render('cadastro_produto')

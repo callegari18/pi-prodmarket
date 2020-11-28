@@ -1,6 +1,5 @@
 const {Usuario} = require('../models/usuarios');
 const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
 
 const UsuarioController = {
     create:(req, res) =>{
@@ -9,7 +8,7 @@ const UsuarioController = {
     store: async (rec, res)=>{
         const{  tipo,
                 nome,
-                nome_fantasia
+                nome_fantasia,
                 titulo,
                 cnpj,
                 ie,
@@ -25,7 +24,7 @@ const UsuarioController = {
         const resultado = await Usuario.create({
             tipo,
             nome,
-            nome_fantasia
+            nome_fantasia,
             titulo,
             cnpj,
             ie,
@@ -43,3 +42,4 @@ const UsuarioController = {
         return res.redirect('/')
     }
 }
+module.exports = UsuarioController
