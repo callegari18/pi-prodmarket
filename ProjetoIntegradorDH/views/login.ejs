@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs'); %>
+
+<main>
+    <div class="container-login">
+        <div class="row">
+            <div class="img-login col-7">
+                <div class="box">
+                    <img src="/images/img/imglogin.png" alt="farm with logo ProdMarket">
+                </div>
+            </div>
+            <div class="form-login col-4">
+                <form action="#" method="POST">
+                    <h2><strong>Faça seu Login</h2></strong>
+                    
+                    <input class="input-login" type="text" name="cnpj" placeholder="CNPJ">
+
+                    <br>
+                                       
+                    <input class="input-login" type="password" name="password" placeholder="Senha">
+
+                    <br><br><br><br>
+                                 
+                    <input type="checkbox" name="remember">
+
+                    <br>
+                    
+                    <Label for="remember">-Lembrar-me</Label>
+
+                    <a href="cadastro.html"><span>Registre-se</span></a>
+
+                    <br><br>
+
+                    <button>Acessar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('partials/footer.ejs'); %>

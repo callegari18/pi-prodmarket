@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/carrinho.css" />
+    <title>ProdMarket-Carrinho</title>
+  </head>
+
+  
+    <body> 
+      <main>
+        <div class="heading">
+          <h1>Carrinho</h1>
+          <hr class="middle" />
+        </div>
+        <div class="basket">
+          <div class="basket-labels">
+            <ul>
+              <li class="item item-heading">Item</li>
+              <li class="price">Preço</li>
+              <li class="quantity">Quantidade</li>
+              <li class="subtotal">Subtotal</li>
+            </ul>
+          </div>
+          <div class="basket-product">
+            <div class="item">
+              <div class="product-image">
+                <img src="img/cebolinha.jpg" alt="" class="product-frame">
+              </div>
+              <div class="product-details">
+                <h2><strong>Fazenda Novo Horizonte</strong></h2>
+                <p><strong>Cebolinha Galega</strong></p>
+                <p><strong>Caixa: 05KG</strong></p>
+                <p>Local: Ibiuna/SP</p>
+                <p>Codigo do Produto - 232321939</p>
+              </div>
+            </div>
+            <div class="price">16.00</div>
+            <div class="quantity">
+              <input type="number" value="1" min="1" class="quantity-field">
+            </div>
+            <div class="subtotal">16.00</div>
+            <div class="remove">
+              <button>Remover</button>
+            </div>
+            <div class="add">
+              <button>Adicionar mais Produtos</button>
+            </div>
+          </div>
+          <div class="basket-product">
+            <div class="item">
+              <div class="product-image">
+                <img src="img/brocolis.jpg" alt="" class="product-frame">
+              </div>
+              <div class="product-details">
+                <h2><strong>Fazenda Nova Gaia</strong></h2>
+                <p><strong>Couve-Flor de Bruxelas</strong></p>
+                <p><strong>Caixa: 05KG</strong></p>
+                <p>Local: Mirassol/SP</p>
+                <p>Codigo do Produto - 235544356</p>
+              </div>
+            </div>
+            <div class="price">21.00</div>
+            <div class="quantity">
+              <input type="number" value="2" min="1" class="quantity-field">
+            </div>
+            <div class="subtotal">42.00</div>
+            <div class="remove">
+              <button>Remover</button>
+            </div>
+            <div class="add">
+              <button>Adicionar mais produtos</button>
+            </div>
+          </div>
+          <div class="basket-product">
+            <div class="item">
+              <div class="product-image">
+                <img src="img/feijao.jpg" alt="" class="product-frame">
+              </div>
+              <div class="product-details">
+                <h2><strong>Chácara Sol Nascente</strong></h2>
+                <p><strong>Couve-Flor de Bruxelas</strong></p>
+                <p><strong>Caixa: 05KG</strong></p>
+                <p>Local: Vargem Grande Paulista/SP</p>
+                <p>Codigo do Produto - 235544356</p>
+              </div>
+            </div>
+            <div class="price">32.00</div>
+            <div class="quantity">
+              <input type="number" value="7" min="1" class="quantity-field">
+            </div>
+            <div class="subtotal">224.00</div>
+            <div class="remove">
+              <button>Remover</button>
+            </div>
+            <div class="add">
+              <button>Adicionar mais Produtos</button>
+            </div>
+          </div>
+          
+        </div>
+        <aside>
+          <div class="summary">
+            <div class="summary-total-items"><span class="total-items"></span>Sumário dos Pedidos</div>
+            <div class="summary-subtotal">
+              <div class="subtotal-title">Subtotal</div>
+              <div class="subtotal-value final-value" id="basket-subtotal">282.00</div>
+              <div class="subtotal-title">Envio</div>
+              <div class="subtotal-value final-value" id="basket-delivery">00.00</div>
+            </div>
+            <div class="summary-delivery">
+              <select name="delivery-collection" class="summary-delivery-selection">
+                  <option value="0" selected="selected">FRETE</option>
+                 <option value="frete-fornecedor">Atraves do Fornecedor</option>
+                 <option value="frete-parceiro">Atraves de Transportadora Parceira</option>
+              </select>
+            </div>
+            <div class="summary-total">
+              <div class="total-title">Total</div>
+              <div class="total-value final-value" id="basket-total">282.00</div>
+            </div>
+            <div class="summary-checkout">
+              <button class="checkout-cta">COMPRAR</button>
+            </div> 
+          </div>
+        </aside>
+      </main>
+      
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
