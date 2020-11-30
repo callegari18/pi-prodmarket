@@ -12,13 +12,13 @@ create:(req,res) => {
 //     console.log("dados:",req.body)
 // }
 
-/*salvar: async (req, res) => {
+/salvar: async (req, res) => {
     // Pegar os dados da requisição
     // Jogar os dados no banco
     // Redirecionar
     const dados = req.body;
     console.log("DADOS", dados);
-   const result = await usuarios.create(dados);*/
+   const result = await usuarios.create(dados);/
 
 store: async (req, res)=>{
     const { tipo
@@ -36,7 +36,7 @@ store: async (req, res)=>{
             responsavel
         } = req.body;
 
-           const result = await Usuarios.create({   
+           const result = await Usuarios.create({
                 tipo,
                 nome,
                 titulo,
@@ -50,7 +50,7 @@ store: async (req, res)=>{
                 telefone,
                 email,
                 responsavel
-            
+
             });
 
             console.log(result)
