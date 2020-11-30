@@ -6,24 +6,24 @@
 </h1>
 <hr>
 
-<form action="#" method="post" enctype="multipart/form-data">
+<form class="form-prod" action="#" method="post" enctype="multipart/form-data">
 
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputProduto">Descrição do Produto</label>
-            <input type="text" class="form-control" id="inputProduto" placeholder="Nome">
+            <label for="descricao">Descrição do Produto</label>
+            <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Nome do Produto">
         </div>
 
         <div class="form-group col-md-3">
-            <label for="inputUnidadeMedida">Unidade de Medida</label>
-            <input type="text" class="form-control" id="inputUnidadeMedida" placeholder="CX 10 Kg">
+            <label for="qunatidade">Unidade de Medida</label>
+            <input type="text" class="form-control" id="quantidade" name="quntidade" placeholder="CX 10 Kg">
         </div>
 
         <div class="form-group col-md-3">
-            <label for="input" class="col-sm-3 control-label">Categoria</label>
+            <label for="categoria" class="col-sm-3 control-label">Categoria</label>
             <div class="col-auto">
-                <select name="" id="input" class="form-control">
+                <select name="categoria" id="categoria" class="form-control">
 
                     <option value="Aves">Aves</option>
                     <option value="Bovinos">Bovinos</option>
@@ -51,16 +51,16 @@
 
 
         <div class="form-group col-md-6">
-            <label for="inputInformacoesGerais">Informações Gerais</label><br>
-            <textarea name="" id="inputInformacoesGerais" cols="40" rows="6">  </textarea>
+            <label for="qialificacao">Informações Gerais</label>
+            <textarea name="qualificacao" id="qialificacao" cols="50" rows="6">  </textarea>
         </div>
 
         <div class="form-group col-md-6">
-            <label for="inputCodReferencia">Cód. Referência</label>
-            <input type="text" class="form-control" id="inputCodReferencia" placeholder="">
+            <label for="codigo_produto">Cód. Referência</label>
+            <input type="text" class="form-control" id="codigo_produto" name="codigo_produto" placeholder="Digite seu código de referência para o Produto">
             <br>
-            <label for="inputPreco">Valor (R$)</label>
-            <input type="text" class="form-control" id="inputPreco" placeholder="">
+            <label for="valor">Valor (R$)</label>
+            <input type="text" class="form-control" id="valor" name="valor" placeholder="Didite o Valor do Produto">
         </div>
     </div>
 
