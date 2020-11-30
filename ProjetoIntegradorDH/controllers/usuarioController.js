@@ -21,7 +21,7 @@ create:(req,res) => {
    const result = await usuarios.create(dados);*/
 
 store: async (req, res)=>{
-    const { tipo
+    const { tipo,
             nome,
             titulo,
             cnpj,
@@ -53,6 +53,14 @@ store: async (req, res)=>{
 
             });
 
+            // store: async (req, res) => {
+            //     // Pegar os dados da requisição
+            //     // Jogar os dados no banco
+            //     // Redirecionar
+            //     const dados = req.body;
+            //     console.log("DADOS", dados);
+            //     const result = await Filme.create(dados);
+        
             console.log(result)
 
    return res.redirect('/');
