@@ -12,9 +12,9 @@ router.get('/contato', function(req, res, next) {
   res.render('contato')
 });
 
-router.get('/cadastro_usuario', usuarioController.criar);
+router.get('/cadastro_usuario', usuarioController.create);
 
-router.post('/cadastro_usuario', usuarioController.salvar);
+router.post('/cadastro_usuario', usuarioController.store);
 
 router.get('/cadastro_produto', function(req, res, next) {
   res.render('cadastro_produto')
