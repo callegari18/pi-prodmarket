@@ -33,6 +33,8 @@ store: async (req, res)=>{
             codigo_natureza,
             telefone,
             email,
+            password,
+            imagem,
             responsavel
         } = req.body;
 
@@ -49,6 +51,8 @@ store: async (req, res)=>{
                 codigo_natureza,
                 telefone,
                 email,
+                password,
+                imagem,
                 responsavel
 
             });

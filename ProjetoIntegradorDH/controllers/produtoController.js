@@ -22,24 +22,22 @@ create:(req,res) => {
 
 store: async (req, res)=>{
     const { categoria,
-            qualificação,
+            nome,
+            tipo,
             quantidade,
             valor,
-            descricao,
             imagem,
-            codigo_produto,
             Usuarios_id
             
         } = req.body;
 
            const result = await Produtos.create({   
             categoria,
-            qualificação,
+            nome,
+            tipo,
             quantidade,
             valor,
-            descricao,
             imagem,
-            codigo_produto,
             Usuarios_id
             });
 
