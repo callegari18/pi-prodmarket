@@ -49,4 +49,4 @@ store: async (req, res)=>{
 }
 }
 
-module.exports=produtoController;
+module.exports= produtoController;
