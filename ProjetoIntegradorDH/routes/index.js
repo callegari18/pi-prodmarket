@@ -14,7 +14,6 @@ router.get('/contato', function(req, res, next) {
 });
 
 router.get('/cadastro_usuario', usuarioController.create);
-
 router.post('/cadastro_usuario', usuarioController.store);
 
 router.get('/cadastro_produto', produtoController.create);
