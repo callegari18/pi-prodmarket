@@ -8,7 +8,7 @@ create:(req,res) => {
 },
 
 // salvar:async(req, res, next) => {
-//     //let form=(req.body)
+//     let form=(req.body)
 //     console.log("dados:",req.body)
 // }
 
@@ -36,7 +36,7 @@ store: async (req, res)=>{
             responsavel
         } = req.body;
 
-           const result = await Usuarios.create({   
+           const result = await Usuarios.create({
                 tipo,
                 nome,
                 titulo,
@@ -50,9 +50,17 @@ store: async (req, res)=>{
                 telefone,
                 email,
                 responsavel
-            
+
             });
 
+            // store: async (req, res) => {
+            //     // Pegar os dados da requisição
+            //     // Jogar os dados no banco
+            //     // Redirecionar
+            //     const dados = req.body;
+            //     console.log("DADOS", dados);
+            //     const result = await Filme.create(dados);
+        
             console.log(result)
 
    return res.redirect('/');
