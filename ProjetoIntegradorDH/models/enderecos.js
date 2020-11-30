@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Enderecos.init({
     logradouro: DataTypes.STRING,
     complemento: DataTypes.STRING,
-    barro: DataTypes.STRING,
+    bairro: DataTypes.STRING,
     cidade: DataTypes.STRING,
     estado: DataTypes.STRING,
     cep: DataTypes.STRING,

@@ -14,7 +14,7 @@ module.exports = {
       complemento: {
         type: Sequelize.STRING
       },
-      barro: {
+      bairro: {
         type: Sequelize.STRING
       },
       cidade: {
