@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       nome: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       cnpj: {
         type: Sequelize.STRING

@@ -21,7 +21,7 @@ create:(req,res) => {
    const result = await usuarios.create(dados);*/
 
 store: async (req, res)=>{
-    const { tipo
+    const { tipo,
             nome,
             titulo,
             cnpj,
