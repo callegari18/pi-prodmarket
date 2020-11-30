@@ -44,6 +44,9 @@ module.exports = {
       responsavel: {
         type: Sequelize.STRING
       },
+      perfil: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
