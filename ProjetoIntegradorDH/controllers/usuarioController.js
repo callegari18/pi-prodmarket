@@ -1,9 +1,9 @@
 var express = require('express');
-const {usuarios,enderecos}=require('../models');
+const {Usuarios}=require('../models');
 
 
-let usuarioController={
-criar: async(req,res) => {
+const usuarioController={
+create:(req,res) => {
     return res.render('cadastro_usuario')
 },
 
@@ -12,13 +12,48 @@ criar: async(req,res) => {
 //     console.log("dados:",req.body)
 // }
 
-salvar: async (req, res) => {
+/*salvar: async (req, res) => {
     // Pegar os dados da requisição
     // Jogar os dados no banco
     // Redirecionar
     const dados = req.body;
     console.log("DADOS", dados);
-   const result = await usuarios.create(dados);
+   const result = await usuarios.create(dados);*/
+
+store:async (req, res)=>{
+    const { tipo,
+            nome,
+            titulo,
+            cnpj,
+            ie,
+            nome_fantasia,
+            ramo,
+            codigo_ap,
+            codigo_as,
+            codigo_natureza,
+            telefone,
+            email,
+            responsavel
+        } = req.body;
+
+           const result = await Usuarios.create({   
+                tipo,
+                nome,
+                titulo,
+                cnpj,
+                ie,
+                nome_fantasia,
+                ramo,
+                codigo_ap,
+                codigo_as,
+                codigo_natureza,
+                telefone,
+                email,
+                responsavel
+            
+            });
+
+            console.log(result)
 
    return res.redirect('/');
 }
