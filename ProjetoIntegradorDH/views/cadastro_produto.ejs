@@ -11,13 +11,13 @@
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="descricao">Descrição do Produto</label>
+            <label for="descricao">Nome</label>
             <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Nome do Produto">
         </div>
 
         <div class="form-group col-md-3">
-            <label for="qunatidade">Unidade de Medida</label>
-            <input type="text" class="form-control" id="quantidade" name="quntidade" placeholder="CX 10 Kg">
+            <label for="qunatidade">Quantidade</label>
+            <input type="text" class="form-control" id="quantidade" name="quantidade" placeholder="CX 10 Kg">
         </div>
 
         <div class="form-group col-md-3">
@@ -46,18 +46,12 @@
             </div>
         </div>
     </div>
+    
 
     <div class="form-row">
-
-
         <div class="form-group col-md-6">
-            <label for="qialificacao">Informações Gerais</label>
-            <textarea name="qualificacao" id="qialificacao" cols="50" rows="6">  </textarea>
-        </div>
-
-        <div class="form-group col-md-6">
-            <label for="codigo_produto">Cód. Referência</label>
-            <input type="text" class="form-control" id="codigo_produto" name="codigo_produto" placeholder="Digite seu código de referência para o Produto">
+            <label for="codigo_produto">Tipo</label>
+            <input type="text" class="form-control" id="tipo" name="tipo" placeholder="EX: Galinha Caipira / Alface Americana">
             <br>
             <label for="valor">Valor (R$)</label>
             <input type="text" class="form-control" id="valor" name="valor" placeholder="Didite o Valor do Produto">
@@ -65,16 +59,13 @@
     </div>
 
     <div class="form-row">
-        <div class="form-group col-md-7">
+        <div class="form-group col-md-6">
             <label for="inputImagem">Cadastrar Imagem <br>( Tamanho mínimo 400x400px, formato JPG, máximo 07
                 imagens
                 )</label>
             <input type="file" id="inputImagem" name="myfile" multiple>
         </div>
     </div>
-
-
-
 
     <div class="form-group col-md-2">
         <button type="submit" class="btn btn-primary">Cadastrar Item</button>
