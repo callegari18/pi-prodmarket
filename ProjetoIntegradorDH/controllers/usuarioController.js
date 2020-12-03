@@ -9,7 +9,7 @@ create:(req,res) => {
 
 index: async (req,res) => {
     const usuario = await Usuario.findAll({
-        include: "enderecos"
+        include: "endereco"
     })
 },
 
