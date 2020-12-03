@@ -70,7 +70,7 @@ store: async (req, res)=>{
                 responsavel
 
             }); 
-            const usuario = result.toJSON()
+            const usuario = result.toJSON();
             const meuendereco = await Enderecos.create({
                 usuarios_id:usuario.id,
                 logradouro:endereco,
