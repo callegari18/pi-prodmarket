@@ -1,10 +1,16 @@
 var express = require('express');
-const {Usuarios}=require('../models');
+const {Usuarios, Enderecos}=require('../models');
 
 
 const usuarioController={
 create:(req,res) => {
     return res.render('cadastro_usuario')
+},
+
+index: async (req,res) => {
+    const usuario = await Usuario.findAll({
+        include: "enderecos"
+    })
 },
 
 // salvar:async(req, res, next) => {
@@ -35,11 +41,19 @@ store: async (req, res)=>{
             email,
             password,
             imagem,
-            responsavel
-        } = req.body;
+            responsavel,
+            endereco,
+            cep,
+            estado,
+            cidade,
+            bairro,
+            complemento
+        } = req.body; 
+
+         const tipoConvertido = tipo.toString();
 
            const result = await Usuarios.create({
-                tipo,
+                tipo:tipoConvertido,
                 nome,
                 titulo,
                 cnpj,
@@ -55,6 +69,16 @@ store: async (req, res)=>{
                 imagem,
                 responsavel
 
+            }); 
+            const usuario = result.toJSON()
+            const meuendereco = await Enderecos.create({
+                usuarios_id:usuario.id,
+                logradouro:endereco,
+                complemento,
+                bairro,
+                cidade,
+                estado,
+                cep 
             });
 
             // store: async (req, res) => {
@@ -65,7 +89,7 @@ store: async (req, res)=>{
             //     console.log("DADOS", dados);
             //     const result = await Filme.create(dados);
         
-            console.log(result)
+            console.log(result.toJSON())
 
    return res.redirect('/');
 }
