@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt') 
-const usuario = require("../models/usuarios")
+const {Usuarios} = require("../models")
 
 const loginController = {
     loginview: (req, res) => {
@@ -7,12 +7,14 @@ const loginController = {
     },
 
     login: async (req,res) => {
+        console.log(req.body)
         const login = {
+    
             email,
             password
         } = req.body
 
-        const user = await usuario.findOne ({
+        const user = await Usuarios.findOne ({
             where: {
                 email
             }
