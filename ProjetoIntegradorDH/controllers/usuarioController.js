@@ -1,5 +1,6 @@
 var express = require('express');
 const {Usuarios, Enderecos}=require('../models');
+const usuarios = require('../models/usuarios');
 
 
 const usuarioController={

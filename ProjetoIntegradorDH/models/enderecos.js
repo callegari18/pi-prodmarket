@@ -4,17 +4,14 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Enderecos extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-  // static associate(models) {
-  //     // define association here
-  //      this.belongsTo(models.Usuarios, { 
-  //     foreignKey: 'Usuarios_id',
-  //      as: "usuario" })
-  //  }
+   
+    static associate(models) {
+
+        Enderecos.belongsTo(models.Usuarios, { 
+       through: 'Usuarios',
+       as: 'usuarios',
+       foreignKey: 'usuarios_id'})
+    }
   };
   Enderecos.init({
     logradouro: DataTypes.STRING,
@@ -23,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     cidade: DataTypes.STRING,
     estado: DataTypes.STRING,
     cep: DataTypes.STRING,
-    Usuarios_id: DataTypes.INTEGER
+    usuarios_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Enderecos',

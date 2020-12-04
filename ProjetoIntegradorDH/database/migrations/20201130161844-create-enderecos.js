@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Enderecos', {
@@ -26,8 +25,15 @@ module.exports = {
       cep: {
         type: Sequelize.STRING
       },
-      Usuarios_id: {
-        type: Sequelize.INTEGER
+      usuarios_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'usuarios'
+          },
+          key: 'id'
+        },
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
