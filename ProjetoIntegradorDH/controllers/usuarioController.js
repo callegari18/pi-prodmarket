@@ -1,7 +1,7 @@
 var express = require('express');
 const {Usuarios, Enderecos}=require('../models');
 const usuarios = require('../models/usuarios');
-
+const bcrypt = require('bcrypt')
 
 const usuarioController={
 create:(req,res) => {
@@ -52,6 +52,8 @@ store: async (req, res)=>{
         } = req.body; 
 
          const tipoConvertido = tipo.toString();
+         const salt = bcrypt.genSaltSync(10)
+         const hash = bcrypt.hashSync(password,salt)
 
            const result = await Usuarios.create({
                 tipo:tipoConvertido,
@@ -66,7 +68,7 @@ store: async (req, res)=>{
                 codigo_natureza,
                 telefone,
                 email,
-                password,
+                password:hash,
                 imagem,
                 responsavel
 

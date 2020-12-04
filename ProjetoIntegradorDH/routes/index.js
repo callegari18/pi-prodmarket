@@ -1,6 +1,7 @@
 var express = require('express');
 const usuarioController = require('../controllers/usuarioController');
 const produtoController = require('../controllers/produtoController');
+const loginController = require('../controllers/loginController');
 var router = express.Router();
 
 
@@ -19,9 +20,8 @@ router.post('/cadastro_usuario', usuarioController.store);
 router.get('/cadastro_produto', produtoController.create);
 router.post('/cadastro_produto', produtoController.store);
 
-router.get('/login', function(req, res, next) {
-  res.render('login')
-});
+router.get('/login',loginController.loginview);
+router.post('/login',loginController.login);
 
 router.get('/parceiros', function(req, res, next) {
   res.render('parceiros')
