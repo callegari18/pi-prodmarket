@@ -9,13 +9,28 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Pedidos_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName:'Pedidos',
+          key: 'id'}
+        },
       },
       Pedidos_Usuarios_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName:'Usuarios',
+          key: 'id'}
+        },
       },
       Produtos_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName:'Produtos',
+          key: 'id'}
+        },
       },
       createdAt: {
         allowNull: false,

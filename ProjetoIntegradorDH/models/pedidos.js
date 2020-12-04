@@ -10,8 +10,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-    }
+
+      Pedidos.belongsTo(models.Usuarios, { 
+     through: 'Usuarios',
+     as: 'usuarios',
+     foreignKey: 'usuarios_id'})
+  };
+  
   };
   Pedidos.init({
     numero_de_pedido: DataTypes.INTEGER,
