@@ -44,6 +44,12 @@ store: async (req, res)=>{
             console.log(result)
 
    return res.redirect('/');
+},
+
+homeCard:async (req,res)=>{
+    const card = await Produtos.findAll();
+    console.log(card);
+    return res.render('home', {card})
 }
 }
 

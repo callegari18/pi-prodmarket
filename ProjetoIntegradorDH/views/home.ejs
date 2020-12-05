@@ -179,48 +179,30 @@
 
         <p class="filter">Ordenar por:</p>
 
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="/images/img/banana1.jpg" alt="produto-1" />
-            <div class="card-body">
-              <p>Banana Prata</p>
-              <hr />
-              <p>CX 10kg</p>
-              <hr />
-              <p><strong>R$ 30,00 a CX</strong></p>
-            </div>
+        
+          
+          <% card.forEach((item, index) => { %>
+            <% let indice=5%>
+            
+            <% if (index%4==0||index==0){ %>
+              <div class="card-deck">
+            <% } %>
+            <div class="card">
+              <img class="card-img-top" src="<%= item.imagem %>" alt="produto-1" />
+              <div class="card-body">
+                <p><%= item.nome%> <%= item.tipo%></p>
+                <hr />
+                <p>CX 10kg</p>
+                <hr />
+                <p><strong><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
+              </div>
+           </div>
+           <% if (index%4==3||index==card.length-1){ %>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="/images/img/caqui1.jpg" alt="produto-2" />
-            <div class="card-body">
-              <p>Caqui Chocolate</p>
-              <hr />
-              <p>CX 15kg</p>
-              <hr />
-              <p><strong>R$ 40,00 a CX</strong></p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="/images/img/goiaba1.jpg" alt="produto-3" />
-            <div class="card-body">
-              <p>Goiaba Vermelha</p>
-              <hr />
-              <p>CX 15kg</p>
-              <hr />
-              <p><strong>R$ 30,00 a CX</strong></p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="/images/img/laranja1.jpg" alt="produto-4" />
-            <div class="card-body" href="produto"> 
-              <p>Laranja Peras</p>
-              <hr />
-              <p>CX 15kg</p>
-              <hr />
-              <p><strong>R$ 25,00 a CX</strong></p>
-            </div>
-          </div>
-        </div>
+          <% } %>
+          <% }) %>
+
+
         <div class="card-deck">
           <div class="card">
             <img class="card-img-top" src="/images/img/limao1.jpg" alt="produto-1" />

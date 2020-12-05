@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       valor: {
-        type: Sequelize.STRING
+        type: Sequelize.DECIMAL(10,2)
       },
       imagem: {
         type: Sequelize.STRING
