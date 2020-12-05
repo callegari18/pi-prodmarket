@@ -1,12 +1,27 @@
 <%- include('partials/header.ejs'); %>
 
         <h1 class="Cadastro">Cadastro de Usuário <span class="Prod">Prod</span><span class="Market">Market</span></h1>
+        
+        <% if (typeof(errors) != "undefined") { %>
+            <p id="paragafoError">ERRO NO CADASTRO DO USUÁRIO</p>
+            <ol>
+
+                <% errors.forEach((error) => { %>
+                    
+                    <li id="errorCadastro"><%= error.msg %> </li>
+
+                <% }); %>     
+
+            </ol>
+        <% } %> 
+
+
         <hr>
 
         <form class="form-user" action="/cadastro_usuario" method="post">
 
             <div class="form-group form-check col-md-12">
-                    <input type="checkbox" class="form-check-input" id="checkComprar" name="tipo" value="Comprar">
+                    <input type="checkbox" class="form-check-input" id="checkComprar" name="tipo" value="Comprar" checked>
                     <label class="form-check-label" for="checkComprar"> Comprar</label>
                     
                     <input type="checkbox" class="form-check-input" id="checkVender" name="tipo" value="Vender">

@@ -138,6 +138,18 @@ label {
   color: #246752;
 }
 
+#paragafoError {
+  font-size: 24px;
+  color: red;
+}
+
+#errorCadastro {
+  color: darkred;
+  display: block;
+  font-size: 14px;
+}
+
+
 ul {
   list-style: none;
   margin: 0;

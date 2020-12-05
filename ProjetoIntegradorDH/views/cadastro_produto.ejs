@@ -4,6 +4,21 @@
 
 <h1 class="Cadastro">Cadastro de Produto <span class="Prod">Prod</span><span class="Market">Market</span>
 </h1>
+
+<% if (typeof(errors) != "undefined") { %>
+    <p id="paragafoError">ERRO NO CADASTRO DO PRDUTO</p>
+    <ol>
+
+        <% errors.forEach((error) => { %>
+            
+            <li id="errorCadastro"><%= error.msg %> </li>
+
+        <% }); %>     
+
+    </ol>
+<% } %> 
+
+
 <hr>
 
 <form class="form-prod" action="/cadastro_produto" method="post" >
@@ -54,7 +69,7 @@
             <input type="text" class="form-control" id="tipo" name="tipo" placeholder="EX: Galinha Caipira / Alface Americana">
             <br>
             <label for="valor">Valor (R$)</label>
-            <input type="text" class="form-control" id="valor" name="valor" placeholder="Didite o Valor do Produto">
+            <input type="text" class="form-control" id="valor" name="valor" placeholder="Digite o Valor do Produto">
         </div>
     </div>
 
