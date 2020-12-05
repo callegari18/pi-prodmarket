@@ -7,9 +7,7 @@ const {check, validationResult, body } = require('express-validator')
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('home')
-});
+router.get('/', produtoController.homeCard);
 
 router.get('/contato', function(req, res, next) {
   res.render('contato')

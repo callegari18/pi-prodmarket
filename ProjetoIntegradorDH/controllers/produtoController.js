@@ -54,6 +54,13 @@ store: async (req, res)=>{
             return res.render('cadastro_usuario', {errors:listaDeErrors.errors})
 
         }
+},
+
+homeCard:async (req,res)=>{
+    const card = await Produtos.findAll();
+    console.log(card);
+    return res.render('home', {card})
+//>>>>>>> 31593cfb76c8ec7d15a3260a91834e8a9376aa33
 }
 
 }
