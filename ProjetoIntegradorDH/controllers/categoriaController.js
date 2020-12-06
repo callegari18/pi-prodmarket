@@ -1,13 +1,24 @@
 var express = require('express');
+var {Produtos} = require("../models")
 
 const categoriaController = {
 
-viewAves: (req, res) => {
+viewAves: async (req, res) => {
+
+    let {categoria} = req.params
+    let result = await Produtos.findAll({
+        where:{
+            categoria:categoria.toString()
+        }
+    })
+
+    console.log(result)
+
     return res.send('aves');
-
-
 },
 viewBovinos: (req, res) => {
+
+    
     return res.send('bovinos');
 
 

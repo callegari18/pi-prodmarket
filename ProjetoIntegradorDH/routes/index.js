@@ -75,7 +75,7 @@ router.get('/carrinho', function(req, res, next) {
   res.render('carrinho')
 });
 
-router.get('/aves', categoriaController.viewAves);
+router.get('/:categoria', categoriaController.viewAves);
 router.get('/bovinos', categoriaController.viewBovinos);
 router.get('/caprinos', categoriaController.viewCaprinos);
 router.get('/cereais', categoriaController.viewCereais);

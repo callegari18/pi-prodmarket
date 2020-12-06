@@ -36,7 +36,6 @@ const contatoController = {
 
                     console.log('Email enviado:');
                     //res.send(mailOption);
-                    alert('msg');
                     res.redirect('/faq');
                 }
             })
