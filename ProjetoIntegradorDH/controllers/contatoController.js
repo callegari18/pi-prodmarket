@@ -33,9 +33,9 @@ const contatoController = {
                 if (error) {
                     console.log(error);
                 } else {
+
                     console.log('Email enviado:');
                     //res.send(mailOption);
-                    alert('msg');
                     res.redirect('/faq');
                 }
             })

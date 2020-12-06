@@ -10,41 +10,41 @@
           <h1>Categorias</h1>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a href="aves"><img src="/images/img/icon/ico-aves.svg" /> Aves </a>
+              <a href="Aves"><img src="/images/img/icon/ico-aves.svg" /> Aves </a>
             </li>
             <li class="nav-item">
-              <a href="bovinos"><img src="/images/img/icon/ico-bovinos.svg" /> Bovinos
+              <a href="Bovinos"><img src="/images/img/icon/ico-bovinos.svg" /> Bovinos
               </a>
             </li>
             <li class="nav-item">
-              <a href="caprinos"><img src="/images/img/icon/ico-caprinos.svg" /> Caprinos
+              <a href="Caprinos"><img src="/images/img/icon/ico-caprinos.svg" /> Caprinos
               </a>
             </li>
             <li class="nav-item">
-              <a href="cereais"><img src="/images/img/icon/ico-cereais.svg" /> Cereais
+              <a href="Cereais"><img src="/images/img/icon/ico-cereais.svg" /> Cereais
               </a>
             </li>
             <li class="nav-item">
-              <a href="cogumelos"><img src="/images/img/icon/ico-cogumelos.svg" /> Cogumelos
+              <a href="Cogumelos"><img src="/images/img/icon/ico-cogumelos.svg" /> Cogumelos
               </a>
             </li>
             <li class="nav-item">
-              <a href="especiarias"><img src="/images/img/icon/ico-especiarias.svg" /> Especiarias
+              <a href="Especiarias"><img src="/images/img/icon/ico-especiarias.svg" /> Especiarias
               </a>
             </li>
             <li class="nav-item">
-              <a href="frutas"><img src="/images/img/icon/ico-frutas.svg" /> Frutas
+              <a href="Frutas"><img src="/images/img/icon/ico-frutas.svg" /> Frutas
               </a>
             </li>
             <li class="nav-item">
-              <a href="frutosDoMar"><img src="/images/img/icon/ico-frutos-do-mar.svg" /> Frutos do
+              <a href="Frutos do Mar"><img src="/images/img/icon/ico-frutos-do-mar.svg" /> Frutos do
                 Mar</a>
             </li>
             <li class="nav-item">
-              <a href="graos"><img src="/images/img/icon/ico-graos.svg" /> Grãos </a>
+              <a href="Grãos"><img src="/images/img/icon/ico-graos.svg" /> Grãos </a>
             </li>
             <li class="nav-item">
-              <a href="hortalicias"><img src="/images/img/icon/ico-hortalicas.svg" /> Hortalicias
+              <a href="Hortaliças"><img src="/images/img/icon/ico-hortalicas.svg" /> Hortalicas
               </a>
             </li>
             <li class="nav-item">
@@ -52,7 +52,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="leiteDerivados"><img src="/images/img/icon/ico-leites-e-derivados.svg" /> Leites
+              <a href="Leite e Derivados"><img src="/images/img/icon/ico-leites-e-derivados.svg" /> Leite
                 e Derivados
               </a>
             </li>
@@ -165,7 +165,7 @@
       <div class="card-body">
         <p><%= item.nome%> <%= item.tipo%></p>
         <hr />
-        <p>CX 10kg</p>
+        <p><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
         <hr />
         <p>
           <strong><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong>
