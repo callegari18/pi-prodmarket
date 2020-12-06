@@ -3,15 +3,15 @@ const usuarioController = require('../controllers/usuarioController');
 const produtoController = require('../controllers/produtoController');
 const loginController = require('../controllers/loginController');
 var router = express.Router();
-const {check, validationResult, body } = require('express-validator')
+const {check, validationResult, body } = require('express-validator');
+const contatoController = require('../controllers/contatoController');
 
 
 /* GET home page. */
 router.get('/', produtoController.homeCard);
 
-router.get('/contato', function(req, res, next) {
-  res.render('contato')
-});
+router.get('/contato', contatoController.viewContato);
+router.post('/contato', contatoController.sendContato);
 
 router.get('/cadastro_usuario', usuarioController.create);
 router.post('/cadastro_usuario', [
@@ -63,9 +63,8 @@ router.get('/termos', function(req, res, next) {
   res.render('termos_garantias')
 });
 
-router.get('/faq', function(req, res, next) {
-  res.render('faq')
-});
+router.get('/faq', contatoController.viewFaq);
+router.post('/faq', contatoController.sendFaq);
 
 router.get('/produto', function(req, res, next) {
   res.render('produto')
@@ -79,6 +78,10 @@ router.get('/produtor', function(req, res, next) {
 });
 router.get('/carrinho', function(req, res, next) {
   res.render('carrinho')
+});
+
+router.get('/categoria', function(req, res, next) {
+  res.render('categoria')
 });
 
 module.exports = router;
