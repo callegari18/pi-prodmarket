@@ -1,251 +1,225 @@
+<%- include('partials/header.ejs'); %>
 
-
-     <%- include('partials/header.ejs'); %>
-     
-     <main>
-        <!-- inicio menu lateral, banner e cards -->
-        <div class="row">
-          <!-- inicio menu lateral -->
-          <div class="col-md-3 menuLateral">
-            <div class="categoria">
-              <div>
-                <h1>Categorias</h1>
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="aves"><img src="/images/img/icon/ico-aves.svg" /> Aves </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="bovinos"
-                      ><img src="/images/img/icon/ico-bovinos.svg" /> Bovinos
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="caprinos"
-                      ><img src="/images/img/icon/ico-caprinos.svg" /> Caprinos
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="cereais"
-                      ><img src="/images/img/icon/ico-cereais.svg" /> Cereais
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="cogumelos"
-                      ><img src="/images/img/icon/ico-cogumelos.svg" /> Cogumelos
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="especiarias"
-                      ><img src="/images/img/icon/ico-especiarias.svg" /> Especiarias
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="frutas"
-                      ><img src="/images/img/icon/ico-frutas.svg" /> Frutas
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="frutosDoMar"
-                      ><img src="/images/img/icon/ico-frutos-do-mar.svg" /> Frutos do
-                      Mar</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a href="graos"><img src="/images/img/icon/ico-graos.svg" /> Grãos </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="hortalicias"
-                      ><img src="/images/img/icon/ico-hortalicas.svg" /> Hortalicias
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="legumes"
-                      ><img src="/images/img/icon/ico-legumes.svg" /> Legumes
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="leiteDerivados"
-                      ><img src="/images/img/icon/ico-leites-e-derivados.svg" /> Leites
-                      e Derivados
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="mel"><img src="/images/img/icon/ico-mel.svg" /> Mel </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="oleosAzeites"
-                      ><img src="/images/img/icon/ico-oleos-e-azeites.svg" /> Oleos e
-                      Azeites
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="peixes"
-                      ><img src="/images/img/icon/ico-peixes.svg" /> Peixes
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="suinos"
-                      ><img src="/images/img/icon/ico-suinos.svg" /> Suinos
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="raizes"
-                      ><img src="/images/img/icon/ico-raizes.svg" /> Raizes
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- fim menu lateral -->
-          <!-- inicio conteudo -->
-          <div class="col-md-9">
-            <!-- inicio banner -->
-            <div id="banner-institucional" class="carousel slide" data-ride="carousel" data-interval="5000">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="/images/img/banner-home01.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/images/img/banner-home02.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/images/img/banner-home03.jpg" alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/images/img/banner-home04.jpg" alt="Fourth slide">
-                </div>
-              </div>
-            </div>
-            <!-- fim banner -->
-            <!-- inicio cards -->
-            <div class="row">
-              <div class="cartao">
-                <!-- card-1 -->
-                <div class="card-produtor" style="width: 11rem">
-                  <img
-                    src="/images/img/produtor-1.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h2 class="card-title">Fazenda Novo Horizonte</h2>
-                    <a href="#" class="btn">Saiba mais</a>
-                  </div>
-                </div>
-                <!-- card-2 -->
-                <div class="card-produtor" style="width: 11rem">
-                  <img
-                    src="/images/img/produtor-2.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h2 class="card-title">Chacara Sol Nascente</h2>
-                    <a href="#" class="btn">Saiba mais</a>
-                  </div>
-                </div>
-                <!-- card-3 -->
-                <div class="card-produtor" style="width: 11rem">
-                  <img
-                    src="/images/img/produtor-3.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h2 class="card-title">Fazenda Nova Gaia</h2>
-                    <a href="#" class="btn">Saiba mais</a>
-                  </div>
-                </div>
-              </div> 
-            </div>
-            <a href="produtores" class="mais-produtores"><p>Mais Produtores</p></a>
-            <!-- fim cards -->
-          </div>
-          <!-- fim conteudo -->
+<main>
+  <!-- inicio menu lateral, banner e cards -->
+  <div class="row">
+    <!-- inicio menu lateral -->
+    <div class="col-md-3 menuLateral">
+      <div class="categoria">
+        <div>
+          <h1>Categorias</h1>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="aves"><img src="/images/img/icon/ico-aves.svg" /> Aves </a>
+            </li>
+            <li class="nav-item">
+              <a href="bovinos"><img src="/images/img/icon/ico-bovinos.svg" /> Bovinos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="caprinos"><img src="/images/img/icon/ico-caprinos.svg" /> Caprinos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="cereais"><img src="/images/img/icon/ico-cereais.svg" /> Cereais
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="cogumelos"><img src="/images/img/icon/ico-cogumelos.svg" /> Cogumelos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="especiarias"><img src="/images/img/icon/ico-especiarias.svg" /> Especiarias
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="frutas"><img src="/images/img/icon/ico-frutas.svg" /> Frutas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="frutosDoMar"><img src="/images/img/icon/ico-frutos-do-mar.svg" /> Frutos do
+                Mar</a>
+            </li>
+            <li class="nav-item">
+              <a href="graos"><img src="/images/img/icon/ico-graos.svg" /> Grãos </a>
+            </li>
+            <li class="nav-item">
+              <a href="hortalicias"><img src="/images/img/icon/ico-hortalicas.svg" /> Hortalicias
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="legumes"><img src="/images/img/icon/ico-legumes.svg" /> Legumes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="leiteDerivados"><img src="/images/img/icon/ico-leites-e-derivados.svg" /> Leites
+                e Derivados
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="mel"><img src="/images/img/icon/ico-mel.svg" /> Mel </a>
+            </li>
+            <li class="nav-item">
+              <a href="oleosAzeites"><img src="/images/img/icon/ico-oleos-e-azeites.svg" /> Oleos e
+                Azeites
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="peixes"><img src="/images/img/icon/ico-peixes.svg" /> Peixes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="suinos"><img src="/images/img/icon/ico-suinos.svg" /> Suinos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="raizes"><img src="/images/img/icon/ico-raizes.svg" /> Raizes
+              </a>
+            </li>
+          </ul>
         </div>
-        <!-- fim menu lateral, banner e cards -->
-        <!-- inicio vitrine -->
-        <hr class="middle" />
-
-        <strong>Frutas</strong>
-
-        <select class="filter">
-          <option>A-Z</option>
-          <option>Z-A</option>
-          <option>Menor Preço</option>
-          <option>Maior Preço</option>
-        </select>
-
-        <p class="filter">Ordenar por:</p>
-
-        
-          
-          <% card.forEach((item,index) => { %>
-            <% let indice=5%>
-            
-            <% if (index%4==0||index==0){ %>
-              <div class="card-deck">
-            <% } %>
-            <div class="card">
-              <img class="card-img-top" src="<%= item.imagem %>" alt="produto-1" />
-              <div class="card-body">
-                <p><%= item.nome%> <%= item.tipo%></p>
-                <hr />
-                <p>CX 10kg</p>
-                <hr />
-                <p><strong><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
-              </div>
-           </div>
-           <% if (index%4==3||index==card.length-1){ %>
+      </div>
+    </div>
+    <!-- fim menu lateral -->
+    <!-- inicio conteudo -->
+    <div class="col-md-9">
+      <!-- inicio banner -->
+      <div id="banner-institucional" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/images/img/banner-home01.jpg" alt="First slide">
           </div>
-          <% } %>
-          <% }) %>
-
-
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="/images/img/limao1.jpg" alt="produto-1" />
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/img/banner-home02.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/img/banner-home03.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/img/banner-home04.jpg" alt="Fourth slide">
+          </div>
+        </div>
+      </div>
+      <!-- fim banner -->
+      <!-- inicio cards -->
+      <div class="row">
+        <div class="cartao">
+          <!-- card-1 -->
+          <div class="card-produtor" style="width: 11rem">
+            <img src="/images/img/produtor-1.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <p>Limão Tahiti</p>
-              <hr />
-              <p>CX 15kg</p>
-              <hr />
-              <p><strong>R$ 25,00 a CX</strong></p>
+              <h2 class="card-title">Fazenda Novo Horizonte</h2>
+              <a href="#" class="btn">Saiba mais</a>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="/images/img/maca1.jpg" alt="produto-2" />
+          <!-- card-2 -->
+          <div class="card-produtor" style="width: 11rem">
+            <img src="/images/img/produtor-2.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <p>Maçã Argentina</p>
-              <hr />
-              <p>CX 10kg</p>
-              <hr />
-              <p><strong>R$ 32,00 a CX</strong></p>
+              <h2 class="card-title">Chacara Sol Nascente</h2>
+              <a href="#" class="btn">Saiba mais</a>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="/images/img/mexirica1.jpg" alt="produto-3" />
+          <!-- card-3 -->
+          <div class="card-produtor" style="width: 11rem">
+            <img src="/images/img/produtor-3.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <p>Mexirica Poucan</p>
-              <hr />
-              <p>CX 15kg</p>
-              <hr />
-              <p><strong>R$ 22,00 a CX</strong></p>
+              <h2 class="card-title">Fazenda Nova Gaia</h2>
+              <a href="#" class="btn">Saiba mais</a>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="/images/img/uva1.jpg" alt="produto-4" />
-            <div class="card-body">
-              <p>Uva Rosa</p>
-              <hr />
-              <p>CX 15kg</p>
-              <hr />
-              <p><strong>R$ 55,00 a CX</strong></p>
-            </div>
-          </div>
-        </div> 
-      </main>
-      
-        <%- include('partials/footer.ejs'); %>
-    
+        </div>
+      </div>
+      <a href="produtores" class="mais-produtores">
+        <p>Mais Produtores</p>
+      </a>
+      <!-- fim cards -->
+    </div>
+    <!-- fim conteudo -->
+  </div>
+  <!-- fim menu lateral, banner e cards -->
+  <!-- inicio vitrine -->
+  <hr class="middle" />
+
+  <strong>Frutas</strong>
+
+  <select class="filter">
+    <option>A-Z</option>
+    <option>Z-A</option>
+    <option>Menor Preço</option>
+    <option>Maior Preço</option>
+  </select>
+
+  <p class="filter">Ordenar por:</p>
+
+
+
+  <% card.forEach((item,index) => { %>
+  <% let indice=5%>
+
+  <% if (index%4==0||index==0){ %>
+  <div class="card-deck">
+    <% } %>
+    <div class="card">
+      <img class="card-img-top" src="<%= item.imagem %>" alt="produto-1" />
+      <div class="card-body">
+        <p><%= item.nome%> <%= item.tipo%></p>
+        <hr />
+        <p>CX 10kg</p>
+        <hr />
+        <p>
+          <strong><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong>
+        </p>
+      </div>
+    </div>
+    <% if (index%4==3||index==card.length-1){ %>
+  </div>
+  <% } %>
+  <% }) %>
+
+
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="/images/img/limao1.jpg" alt="produto-1" />
+      <div class="card-body">
+        <p>Limão Tahiti</p>
+        <hr />
+        <p>CX 15kg</p>
+        <hr />
+        <p><strong>R$ 25,00 a CX</strong></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="/images/img/maca1.jpg" alt="produto-2" />
+      <div class="card-body">
+        <p>Maçã Argentina</p>
+        <hr />
+        <p>CX 10kg</p>
+        <hr />
+        <p><strong>R$ 32,00 a CX</strong></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="/images/img/mexirica1.jpg" alt="produto-3" />
+      <div class="card-body">
+        <p>Mexirica Poucan</p>
+        <hr />
+        <p>CX 15kg</p>
+        <hr />
+        <p><strong>R$ 22,00 a CX</strong></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="/images/img/uva1.jpg" alt="produto-4" />
+      <div class="card-body">
+        <p>Uva Rosa</p>
+        <hr />
+        <p>CX 15kg</p>
+        <hr />
+        <p><strong>R$ 55,00 a CX</strong></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer.ejs'); %>
