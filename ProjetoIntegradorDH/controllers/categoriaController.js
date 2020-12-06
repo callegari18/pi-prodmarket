@@ -6,15 +6,16 @@ const categoriaController = {
 viewAves: async (req, res) => {
 
     let {categoria} = req.params
-    let result = await Produtos.findAll({
+    let card = await Produtos.findAll({
         where:{
             categoria:categoria.toString()
         }
     })
 
-    console.log(result)
+    console.log(card)
 
-    return res.send(categoria.toString());
+return res.render('categoria', {card, categoria});
+
 },
 viewBovinos: (req, res) => {
 

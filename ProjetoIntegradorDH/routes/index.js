@@ -76,22 +76,7 @@ router.get('/carrinho', function(req, res, next) {
 });
 
 router.get('/:categoria', categoriaController.viewAves);
-router.get('/bovinos', categoriaController.viewBovinos);
-router.get('/caprinos', categoriaController.viewCaprinos);
-router.get('/cereais', categoriaController.viewCereais);
-router.get('/cogumelos', categoriaController.viewCogumelos);
-router.get('/especiarias', categoriaController.viewEpeciarias);
-router.get('/frutas', categoriaController.viewFrutas);
-router.get('/frutosDoMar', categoriaController.viewFrutosDoMar);
-router.get('/graos', categoriaController.viewGraos);
-router.get('/hortalicias', categoriaController.viewHortalicias);
-router.get('/legumes', categoriaController.viewLegumes);
-router.get('/leiteDerivados', categoriaController.viewLeiteDerivados);
-router.get('/mel', categoriaController.viewMel);
-router.get('/oleosAzeites', categoriaController.viewOleoAzeite);
-router.get('/peixes', categoriaController.viewPeixes);
-router.get('/suinos', categoriaController.viewSuinos);
-router.get('/raizes', categoriaController.viewRaizes);
+
 
 
 module.exports = router;
