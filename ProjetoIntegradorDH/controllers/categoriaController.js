@@ -14,7 +14,7 @@ viewAves: async (req, res) => {
 
     console.log(result)
 
-    return res.send('aves');
+    return res.send(categoria.toString());
 },
 viewBovinos: (req, res) => {
 
