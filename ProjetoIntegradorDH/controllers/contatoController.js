@@ -33,6 +33,7 @@ const contatoController = {
                 if (error) {
                     console.log(error);
                 } else {
+
                     console.log('Email enviado:');
                     //res.send(mailOption);
                     res.redirect('/faq');
