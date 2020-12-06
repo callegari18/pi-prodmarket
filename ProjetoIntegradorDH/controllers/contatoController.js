@@ -35,6 +35,7 @@ const contatoController = {
                 } else {
                     console.log('Email enviado:');
                     //res.send(mailOption);
+                    alert('msg');
                     res.redirect('/faq');
                 }
             })
@@ -71,8 +72,10 @@ const contatoController = {
                     console.log(error);
                 } else {
                     console.log('Email enviado:');
-                    //res.send(mailOption);
+                   
+                   
                     res.redirect('/contato');
+                    alert('menssagem enviada com sucesso!');
                 }
             })
         }
