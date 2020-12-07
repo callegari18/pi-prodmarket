@@ -1,0 +1,20 @@
+   
+
+h2 tituloSobre{
+    font-size: 20px;
+    color: #68b4a6;
+    font-style: bold;
+    text-align: center;
+}
+
+
+p pSobre{
+    font-size: 16px;
+    color: #68b4a6;
+    margin-left: 70px;
+    margin-right: 500px;
+}
+
+ul ulSobre{
+    color: #68b4a6;
+}

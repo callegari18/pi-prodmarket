@@ -1,0 +1,43 @@
+a.button-product {
+    color: white;
+    background-color: #246752;
+    border: 1px solid  #246752 ;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    
+} 
+
+.card {
+    cursor:default;
+} 
+
+a.button-product:hover {
+ text-decoration: none;
+} 
+
+a.button-product:hover{
+    color: white;
+}
+
+
+.card-produto {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.text-produto {
+    text-align: left;
+}
+
+.card-header-produto {
+    text-align: center;
+    padding: 15px 10px;
+    background: #68b4a6;
+    color: #fff;
+}
