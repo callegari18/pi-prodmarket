@@ -3,39 +3,35 @@ const usuarioController = require('../controllers/usuarioController');
 const produtoController = require('../controllers/produtoController');
 const loginController = require('../controllers/loginController');
 var router = express.Router();
-const {check, validationResult, body } = require('express-validator')
+const {check, validationResult, body } = require('express-validator');
+const contatoController = require('../controllers/contatoController');
+const categoriaController = require('../controllers/categoriaController');
+const testeController = require('../controllers/testeController'); 
+const auth = require ("../middlewares/auth")
 
 
 /* GET home page. */
 router.get('/', produtoController.homeCard);
 
-router.get('/contato', function(req, res, next) {
-  res.render('contato')
-});
+router.get('/contato', contatoController.viewContato);
+router.post('/contato', contatoController.sendContato);
 
 router.get('/cadastro_usuario', usuarioController.create);
 router.post('/cadastro_usuario', [
-  check('tipo').isIn(['Comprar', 'Vender']),
-  check('nome').isLength({min:1}).withMessage('Campo "Nome" Obrigatório'),
-  check('titulo').isLength({min:1}).withMessage('Campo "Titulo" Obrigatório'),
-  check('cnpj').isLength({min:1}).withMessage('Campo "CNPJ" Obrigatório'),
-  check('ie').isLength({min:1}).withMessage('Campo "Inscrição Estadual" Obrigatório'),
-  check('nome_fantasia').isLength({min:1}).withMessage('Campo "Nome Fantasia" Obrigatório'),
-  check('ramo').isLength({min:1}).withMessage('Campo "Ramo de Atividade" Obrigatório'),
-  check('codigo_ap').isLength({min:1}).withMessage('Campo "Atividade Principal" Obrigatório'),
-  check('codigo_as').isLength({min:1}).withMessage('Campo "Atividade Secundária" Obrigatório'),
-  check('codigo_natureza').isLength({min:1}).withMessage('Campo "Natureza Jurídica" Obrigatório'),
-  check('telefone').isLength({min:1}).withMessage('Campo "Telefone" Obrigatório'),
-  check('email').isEmail().withMessage('Campo "e-mail" Obrigatório'),
-  check('password').isLength({min:1}).withMessage('Campo "Senha" Obrigatório'),
-  check('responsavel').isLength({min:1}).withMessage('Campo "Nome do Responsável" Obrigatório'),
-  check('endereco').isLength({min:1}).withMessage('Campo "Endereço" Obrigatório'),
-  check('cep').isLength({min:1}).withMessage('Campo "CEP" Obrigatório'),
-  check('estado').isLength({min:1}).withMessage('Campo "Estado" Obrigatório'),
-  check('cidade').isLength({min:1}).withMessage('Campo "Cidade" Obrigatório'),
+            check('tipo').isIn(['Comprar', 'Vender']),
+            check('nome').isLength({min:1}).withMessage('Campo "Nome Empresarial" Obrigatório'),
+            check('cnpj').isLength({min:1}).withMessage('Campo "CNPJ" Obrigatório'),
+            check('ramo').isLength({min:1}).withMessage('Campo "Ramo de Atividade" Obrigatório'),
+            check('telefone').isLength({min:1}).withMessage('Campo "Telefone" Obrigatório'),
+            check('email').isEmail().withMessage('Campo "e-mail" Obrigatório'),
+            check('password').isLength({min:1}).withMessage('Campo "Senha" Obrigatório'),
+            check('responsavel').isLength({min:1}).withMessage('Campo "Nome do Responsável" Obrigatório'),
+            check('endereco').isLength({min:1}).withMessage('Campo "Endereço" Obrigatório'),
+            check('cep').isLength({min:1}).withMessage('Campo "CEP" Obrigatório'),
+            check('estado').isLength({min:1}).withMessage('Campo "Estado" Obrigatório'),
 ], usuarioController.store);
 
-router.get('/cadastro_produto', produtoController.create);
+router.get('/cadastro_produto', auth, produtoController.create);
 router.post('/cadastro_produto', [
             check('categoria').isLength({min:1}).withMessage('Campo "Categoria" Obrigatório'),
             check('nome').isLength({min:1}).withMessage('Campo "Nome" Obrigatório'),
@@ -63,9 +59,8 @@ router.get('/termos', function(req, res, next) {
   res.render('termos_garantias')
 });
 
-router.get('/faq', function(req, res, next) {
-  res.render('faq')
-});
+router.get('/faq', contatoController.viewFaq);
+router.post('/faq', contatoController.sendFaq);
 
 router.get('/produto', function(req, res, next) {
   res.render('produto')
@@ -77,8 +72,16 @@ router.get('/produtores', function(req, res, next) {
 router.get('/produtor', function(req, res, next) {
   res.render('produtor')
 });
-router.get('/carrinho', function(req, res, next) {
+router.get('/carrinho', auth ,function(req, res, next) {
   res.render('carrinho')
 });
+
+router.get('/:categoria', categoriaController.viewCategoria);
+
+
+router.get('/teste', testeController.form);
+router.post('/teste', testeController.formSend);
+
+
 
 module.exports = router;

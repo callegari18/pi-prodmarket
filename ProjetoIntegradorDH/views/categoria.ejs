@@ -1,0 +1,35 @@
+<%- include('partials/header.ejs'); %>
+
+        <div class="heading tituloProdutor">
+          <h1><%= categoria%></h1>
+        </div>
+        <hr class="middle" />
+
+
+        <% card.forEach((item,index) => { %>
+          <% let indice=5%>
+        
+          <% if (index%4==0||index==0){ %>
+          <div class="card-deck">
+            <% } %>
+            <div class="card">
+              <img class="card-img-top" src="<%= item.imagem %>" alt="produto-1" />
+              <div class="card-body">
+                <p><%= item.nome%> <%= item.tipo%></p>
+                <hr />
+                <p><strong><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
+                <hr />
+                <p>
+                  <button>Adicionar no carrinho</button>
+                </p>
+              </div>
+            </div>
+            <% if (index%4==3||index==card.length-1){ %>
+          </div>
+          <% } %>
+          <% }) %>
+        
+
+
+         <!-- fim cards -->
+         <%- include('partials/footer.ejs'); %>

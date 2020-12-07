@@ -8,19 +8,6 @@ create:(req,res) => {
     return res.render('cadastro_produto')
 },
 
-// salvar:async(req, res, next) => {
-//     //let form=(req.body)
-//     console.log("dados:",req.body)
-// }
-
-/*salvar: async (req, res) => {
-    // Pegar os dados da requisição
-    // Jogar os dados no banco
-    // Redirecionar
-    const dados = req.body;
-    console.log("DADOS", dados);
-   const result = await usuarios.create(dados);*/
-
 store: async (req, res)=>{
     const listaDeErrors = validationResult(req);
 
@@ -60,7 +47,7 @@ homeCard:async (req,res)=>{
     const card = await Produtos.findAll();
     console.log(card);
     return res.render('home', {card})
-//>>>>>>> 31593cfb76c8ec7d15a3260a91834e8a9376aa33
+
 }
 
 }
