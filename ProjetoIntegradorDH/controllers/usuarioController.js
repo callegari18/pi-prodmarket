@@ -1,8 +1,6 @@
-var express = require('express');
 const {Usuarios, Enderecos}=require('../models');
-const usuarios = require('../models/usuarios');
 const bcrypt = require('bcrypt');
-const {check, validationResult, body } = require('express-validator');
+const { validationResult } = require('express-validator');
 
 const usuarioController={
 create:(req,res) => {
@@ -17,9 +15,8 @@ index: async (req,res) => {
 
 store: async (req, res)=>{
     const listaDeErrors = validationResult(req);
-            
-    if(listaDeErrors.isEmpty()){
 
+    if(listaDeErrors.isEmpty()){
         const{ tipo,
                 nome,
                 titulo,
@@ -33,7 +30,6 @@ store: async (req, res)=>{
                 telefone,
                 email,
                 password,
-                imagem,
                 responsavel,
                 endereco,
                 cep,
@@ -41,7 +37,8 @@ store: async (req, res)=>{
                 cidade,
                 bairro,
                 complemento
-            } = req.body; 
+            } = req.body;
+        const {filename} = req.file;
 
         const tipoConvertido = tipo.toString();
         const salt = bcrypt.genSaltSync(10)
@@ -61,10 +58,10 @@ store: async (req, res)=>{
             telefone,
             email,
             password:hash,
-            imagem,
+            imagem: filename,
             responsavel
 
-        }); 
+        });
 
         const usuario = result.toJSON();
         const meuendereco = await Enderecos.create({
@@ -74,16 +71,14 @@ store: async (req, res)=>{
             bairro,
             cidade,
             estado,
-            cep 
+            cep
         });
 
-            console.log(result.toJSON())
-
-            return res.redirect('/');
+        return res.redirect('/');
 
     } else{
 
-        return res.render('cadastro_usuario', {errors:listaDeErrors.errors})
+        return res.render('cadastro_usuario', {errors: listaDeErrors.errors})
 
     }
 

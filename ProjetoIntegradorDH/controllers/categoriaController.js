@@ -1,4 +1,3 @@
-var express = require('express');
 var {Produtos} = require("../models")
 
 const categoriaController = {

@@ -1,4 +1,3 @@
-var express = require('express');
 const nodemailer = require("nodemailer");
 
 const contatoController = {
@@ -72,8 +71,7 @@ const contatoController = {
                     console.log(error);
                 } else {
                     console.log('Email enviado:');
-                   
-                   
+
                     res.redirect('/contato');
                     alert('menssagem enviada com sucesso!');
                 }

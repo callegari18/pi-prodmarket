@@ -7,6 +7,7 @@ const {check, validationResult, body } = require('express-validator');
 const contatoController = require('../controllers/contatoController');
 const categoriaController = require('../controllers/categoriaController');
 const auth = require('../middlewares/auth');
+const uploadMiddleware = require('../middlewares/upload');
 
 
 /* GET home page. */
@@ -16,7 +17,7 @@ router.get('/contato', contatoController.viewContato);
 router.post('/contato', contatoController.sendContato);
 
 router.get('/cadastro_usuario', usuarioController.create);
-router.post('/cadastro_usuario', [
+router.post('/cadastro_usuario', uploadMiddleware, [
             check('tipo').isIn(['Comprar', 'Vender']),
             check('nome').isLength({min:1}).withMessage('Campo "Nome Empresarial" Obrigatório'),
             check('cnpj').isLength({min:1}).withMessage('Campo "CNPJ" Obrigatório'),
@@ -28,16 +29,18 @@ router.post('/cadastro_usuario', [
             check('endereco').isLength({min:1}).withMessage('Campo "Endereço" Obrigatório'),
             check('cep').isLength({min:1}).withMessage('Campo "CEP" Obrigatório'),
             check('estado').isLength({min:1}).withMessage('Campo "Estado" Obrigatório'),
-], usuarioController.store);
+],
+usuarioController.store);
 
 router.get('/cadastro_produto', auth, produtoController.create);
-router.post('/cadastro_produto', [
+router.post('/cadastro_produto', auth, uploadMiddleware, [
             check('categoria').isLength({min:1}).withMessage('Campo "Categoria" Obrigatório'),
             check('nome').isLength({min:1}).withMessage('Campo "Nome" Obrigatório'),
             check('tipo').isLength({min:1}).withMessage('Campo "Tipo" Obrigatório'),
             check('quantidade').isLength({min:1}).withMessage('Campo "Quantidade" Obrigatório'),
             check('valor').isLength({min:1}).withMessage('Campo "Valor" Obrigatório'),
-] ,produtoController.store);
+],
+produtoController.store);
 
 router.get('/login',loginController.loginview);
 router.post('/login',loginController.login);

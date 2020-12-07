@@ -1,5 +1,5 @@
 # Banco_Dados
-config/**/*.js
+config/**/database.js
 
 # Modulos
 /node_modules

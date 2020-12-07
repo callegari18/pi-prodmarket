@@ -1,6 +1,5 @@
-var express = require('express');
 const {Produtos}=require('../models');
-const {check, validationResult, body } = require('express-validator');
+const {validationResult } = require('express-validator');
 
 
 const produtoController={
@@ -24,43 +23,43 @@ create:(req,res) => {
 store: async (req, res)=>{
     const listaDeErrors = validationResult(req);
 
+    console.log(req.body)
+    console.log(listaDeErrors.array());
+
         if(listaDeErrors.isEmpty()){
 
-            const { categoria,
-                    nome,
-                    tipo,
-                    quantidade,
-                    valor,
-                    imagem,
-                    Usuarios_id
-            
-                } = req.body;
+            const {
+                categoria,
+                nome,
+                tipo,
+                quantidade,
+                valor,
+                Usuarios_id
+            } = req.body;
 
-           const result = await Produtos.create({   
-            categoria,
-            nome,
-            tipo,
-            quantidade,
-            valor,
-            imagem,
-            Usuarios_id
+            const {filename} = req.file;
+
+            await Produtos.create({
+                categoria,
+                nome,
+                tipo,
+                quantidade,
+                valor,
+                imagem: filename,
+                Usuarios_id
             });
-
-            console.log(result)
 
             return res.redirect('/');
         }else{
 
-            return res.render('cadastro_usuario', {errors:listaDeErrors.errors})
+            return res.render('cadastro_usuario', { errors: listaDeErrors.errors })
 
         }
 },
 
-homeCard:async (req,res)=>{
+homeCard: async (req,res)=>{
     const card = await Produtos.findAll();
-    console.log(card);
     return res.render('home', {card})
-//>>>>>>> 31593cfb76c8ec7d15a3260a91834e8a9376aa33
 }
 
 }

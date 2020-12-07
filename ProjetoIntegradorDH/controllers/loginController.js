@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt') 
+const bcrypt = require('bcrypt')
 const {Usuarios} = require("../models")
 
 const loginController = {
@@ -7,9 +7,8 @@ const loginController = {
     },
 
     login: async (req,res) => {
-        console.log(req.body)
         const login = {
-    
+
             email,
             password
         } = req.body
@@ -18,8 +17,7 @@ const loginController = {
             where: {
                 email
             }
-    
-        }) 
+        })
         if (!user) {
            return res.send("Usuário Inválido")
         }
@@ -27,13 +25,13 @@ const loginController = {
         if (!senhaValida) {
             return res.send("Senha Inválida")
         }else{
+        const usuario = user.toJSON();
+        usuario.password = undefined;
 
-        req.session.usuario = user;
-
-        console.log(senhaValida)
+        req.session.usuario = usuario;
 
         return res.redirect('/')
-        } 
+        }
 
     }
 }
