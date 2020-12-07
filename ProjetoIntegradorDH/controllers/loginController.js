@@ -21,14 +21,21 @@ const loginController = {
     
         }) 
         if (!user) {
-           return res.render('login')
+           return res.send("Usuário Inválido")
         }
         const senhaValida = bcrypt.compareSync (password,user.password)
         if (!senhaValida) {
-            return res.render('login')
-        }
-        return res.render('carrinho')
-    } 
+            return res.send("Senha Inválida")
+        }else{
+
+        req.session.usuario = user;
+
+        console.log(senhaValida)
+
+        return res.redirect('/')
+        } 
+
+    }
 }
 
 module.exports = loginController;

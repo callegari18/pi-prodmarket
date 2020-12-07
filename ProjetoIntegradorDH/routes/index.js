@@ -6,6 +6,7 @@ var router = express.Router();
 const {check, validationResult, body } = require('express-validator');
 const contatoController = require('../controllers/contatoController');
 const categoriaController = require('../controllers/categoriaController');
+const auth = require('../middlewares/auth');
 
 
 /* GET home page. */
@@ -27,10 +28,9 @@ router.post('/cadastro_usuario', [
             check('endereco').isLength({min:1}).withMessage('Campo "Endereço" Obrigatório'),
             check('cep').isLength({min:1}).withMessage('Campo "CEP" Obrigatório'),
             check('estado').isLength({min:1}).withMessage('Campo "Estado" Obrigatório'),
-            check('cidade').isLength({min:1}).withMessage('Campo "Cidade" Obrigatório'),
 ], usuarioController.store);
 
-router.get('/cadastro_produto', produtoController.create);
+router.get('/cadastro_produto', auth, produtoController.create);
 router.post('/cadastro_produto', [
             check('categoria').isLength({min:1}).withMessage('Campo "Categoria" Obrigatório'),
             check('nome').isLength({min:1}).withMessage('Campo "Nome" Obrigatório'),
@@ -71,11 +71,11 @@ router.get('/produtores', function(req, res, next) {
 router.get('/produtor', function(req, res, next) {
   res.render('produtor')
 });
-router.get('/carrinho', function(req, res, next) {
+router.get('/carrinho', auth ,function(req, res, next) {
   res.render('carrinho')
 });
 
-router.get('/:categoria', categoriaController.viewAves);
+router.get('/:categoria', categoriaController.viewCategoria);
 
 
 
