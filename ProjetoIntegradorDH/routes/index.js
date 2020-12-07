@@ -6,7 +6,8 @@ var router = express.Router();
 const {check, validationResult, body } = require('express-validator');
 const contatoController = require('../controllers/contatoController');
 const categoriaController = require('../controllers/categoriaController');
-const testeController = require('../controllers/testeController');
+const testeController = require('../controllers/categoriaController')
+const auth = require('../middlewares/auth');
 
 
 /* GET home page. */

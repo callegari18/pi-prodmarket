@@ -3,11 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-<<<<<<< HEAD
 var multer = require ('multer'); 
-=======
-var session = require('express-session')
->>>>>>> d962dd98cda875e09cd34d558006b1cbe7e0463d
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
