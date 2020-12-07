@@ -6,6 +6,7 @@ var router = express.Router();
 const {check, validationResult, body } = require('express-validator');
 const contatoController = require('../controllers/contatoController');
 const categoriaController = require('../controllers/categoriaController');
+const testeController = require('../controllers/testeController');
 
 
 /* GET home page. */
@@ -75,8 +76,12 @@ router.get('/carrinho', function(req, res, next) {
   res.render('carrinho')
 });
 
+
+
+router.get('/teste', testeController.form);
+router.post('/teste', testeController.formSend);
+
+
 router.get('/:categoria', categoriaController.viewAves);
-
-
 
 module.exports = router;
