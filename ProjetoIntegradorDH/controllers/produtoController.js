@@ -46,7 +46,7 @@ store: async (req, res)=>{
                 quantidade,
                 valor,
                 imagem: filename,
-                Usuarios_id
+                Usuarios_id: req.session.usuario.id
             });
 
             return res.redirect('/');
