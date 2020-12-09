@@ -35,21 +35,7 @@ p {
   margin: 0.75rem 0 0;
 }
 
-h1{
-    
-    color: #246752;
-    font-size: 40px;
-    height: auto;
-    width: auto;
-}
 
-h2 {
-  font-size: 0.75rem;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-  color: #246752;
-}
 
 input,
 button {
