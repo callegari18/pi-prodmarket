@@ -77,7 +77,7 @@ router.get('/produtor', function(req, res, next) {
 router.get('/carrinho', auth ,function(req, res, next) {
   res.render('carrinho')
 });
-router.get('/homeLogado', function(req, res, next) {
+router.get('/homeLogado', function(req, res) {
   res.render('homeLogado')
 });
 
