@@ -33,6 +33,12 @@ const loginController = {
         return res.redirect('/')
         }
 
+    },
+
+    logout:(req,res)=>{
+        req.session.destroy(function(err) {
+        // cannot access session here
+      })
     }
 }
 

@@ -79,9 +79,7 @@ router.get('/produtor', function(req, res, next) {
 });
 router.get('/carrinho', auth, carrinhoController.viewCarrinho);
 
-router.get('/homeLogado', function(req, res) {
-  res.render('homeLogado')
-});
+router.get('/', auth, loginController.logout);
 
 router.get('/:categoria', categoriaController.viewCategoria);
 
