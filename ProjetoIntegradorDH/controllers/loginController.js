@@ -37,7 +37,7 @@ const loginController = {
 
     logout:(req,res)=>{
         req.session.destroy() 
-        return res.redirect("/home") 
+        return res.redirect("/") 
     }, 
 }
 
