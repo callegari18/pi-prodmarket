@@ -34,7 +34,7 @@ router.post('/cadastro_usuario', uploadMiddleware, [
 usuarioController.store);
 
 router.get('/cadastro_produto', auth, produtoController.create);
-router.post('/cadastro_produto', auth, uploadMiddleware, [
+router.post('/cadastro_produto', auth,uploadMiddleware, [
             check('categoria').isLength({min:1}).withMessage('Campo "Categoria" Obrigatório'),
             check('nome').isLength({min:1}).withMessage('Campo "Nome" Obrigatório'),
             check('tipo').isLength({min:1}).withMessage('Campo "Tipo" Obrigatório'),
@@ -79,7 +79,7 @@ router.get('/produtor', function(req, res, next) {
 });
 router.get('/carrinho', auth, carrinhoController.viewCarrinho);
 
-router.get('/', auth, loginController.logout);
+router.get('/logout', auth, loginController.logout);
 
 router.get('/:categoria', categoriaController.viewCategoria);
 

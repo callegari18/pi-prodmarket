@@ -36,10 +36,9 @@ const loginController = {
     },
 
     logout:(req,res)=>{
-        req.session.destroy(function(err) {
-        // cannot access session here
-      })
-    }
+        req.session.destroy() 
+        return res.redirect("/home") 
+    }, 
 }
 
 module.exports = loginController;
