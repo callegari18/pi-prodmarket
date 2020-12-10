@@ -41,7 +41,7 @@ const contatoController = {
         },
 
         viewContato: (req,res) => {
-            return res.render('contato');
+            return res.render('contato',{usuario: req.session.usuario});
         },
         sendContato: (req,res) => {
             let form = req.body
