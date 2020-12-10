@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 
 const contatoController = {
         viewFaq: (req, res) => {
-            return res.render('faq');
+            return res.render('faq',{usuario: req.session.usuario});
         },
 
         sendFaq: (req, res, next) => {
@@ -41,7 +41,7 @@ const contatoController = {
         },
 
         viewContato: (req,res) => {
-            return res.render('contato');
+            return res.render('contato',{usuario: req.session.usuario});
         },
         sendContato: (req,res) => {
             let form = req.body

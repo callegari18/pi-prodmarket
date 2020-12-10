@@ -35,21 +35,7 @@ p {
   margin: 0.75rem 0 0;
 }
 
-h1{
-    
-    color: #246752;
-    font-size: 40px;
-    height: auto;
-    width: auto;
-}
 
-h2 {
-  font-size: 0.75rem;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-  color: #246752;
-}
 
 input,
 button {
@@ -93,7 +79,7 @@ button,
 .subtotal:before,
 .subtotal-value:before,
 .total-value:before {
-  content: 'R$';
+  /* content: 'R$'; */
 }
 
 .hide {
@@ -265,7 +251,12 @@ aside {
   background-color:white;
   border: 1px solid #aaa;
   padding: 1rem;
+<<<<<<< HEAD
   position:sticky;
+=======
+  position: fixed;
+  position: sticky;
+>>>>>>> 590f3b0bfa655d3e97bb8916aacc9d58b6e599c8
   width: 250px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -333,6 +324,15 @@ aside {
   font-size: 0.625rem;
   height: 34px;
   width: 100%;
+}
+
+.fotoPerfil {
+  border: 1px solid #aaa;
+  border-radius: 50px;
+  display: block;
+  font-size: 0.625rem;
+  height: 80px;
+  width: 80px;
 }
 
 @media screen and (max-width: 640px) {

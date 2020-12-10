@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 
 const usuarioController={
 create:(req,res) => {
-    return res.render('cadastro_usuario')
+    return res.render('cadastro_usuario',{usuario: req.session.usuario})
 },
 
 index: async (req,res) => {
@@ -82,9 +82,14 @@ store: async (req, res)=>{
 
     }
 
+    
+
 },
 
-
+headerLogado: async (req,res)=>{
+    const perfil = await Usuarios.findAll();
+    return res.render('header-logado', {perfil})
+}
 
 
 }

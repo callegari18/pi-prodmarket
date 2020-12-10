@@ -4,7 +4,7 @@ const {validationResult } = require('express-validator');
 
 const produtoController={
 create:(req,res) => {
-    return res.render('cadastro_produto')
+    return res.render('cadastro_produto',{usuario: req.session.usuario})
 },
 
 // salvar:async(req, res, next) => {
@@ -59,7 +59,26 @@ store: async (req, res)=>{
 
 homeCard: async (req,res)=>{
     const card = await Produtos.findAll();
-    return res.render('home', {card})
+    return res.render('home', {card, usuario: req.session.usuario})
+},
+
+comprarProduto: async (req, res) => {
+    const {id} = req.params;
+    const produto = await Produtos.findOne({ where: {id}, include: "usuarios"});
+    const produtoJson = await produto.toJSON();
+
+    if(!produto) {
+        return res.redirect('/home')
+    }
+
+    if (!req.session.carrinho) {
+        req.session.carrinho = [];
+        req.session.carrinho.push(produtoJson)
+    } else {
+        req.session.carrinho.push(produtoJson)
+    }
+
+    return res.redirect('/carrinho');
 }
 
 }

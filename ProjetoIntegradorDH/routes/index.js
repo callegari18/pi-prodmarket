@@ -6,6 +6,7 @@ var router = express.Router();
 const {check, validationResult, body } = require('express-validator');
 const contatoController = require('../controllers/contatoController');
 const categoriaController = require('../controllers/categoriaController');
+const carrinhoController = require('../controllers/carrinhoController');
 const auth = require('../middlewares/auth');
 const uploadMiddleware = require('../middlewares/upload');
 
@@ -46,37 +47,38 @@ router.get('/login',loginController.loginview);
 router.post('/login',loginController.login);
 
 router.get('/parceiros', function(req, res, next) {
-  res.render('parceiros')
+  res.render('parceiros',{usuario: req.session.usuario})
 });
 
 router.get('/sobrenos', function(req, res, next) {
-  res.render('sobrenos')
+  res.render('sobrenos',{usuario: req.session.usuario})
 });
 
 router.get('/seguranca', function(req, res, next) {
-  res.render('seguranca_privacidade')
+  res.render('seguranca_privacidade',{usuario: req.session.usuario})
 });
 
 router.get('/termos', function(req, res, next) {
-  res.render('termos_garantias')
+  res.render('termos_garantias',{usuario: req.session.usuario})
 });
 
 router.get('/faq', contatoController.viewFaq);
 router.post('/faq', contatoController.sendFaq);
 
-router.get('/produto', function(req, res, next) {
-  res.render('produto')
-});
+// router.get('/produto', function(req, res, next) {
+//   res.render('produto')
+// });
+
+router.get('/produto/:id', auth, produtoController.comprarProduto);
 
 router.get('/produtores', function(req, res, next) {
-  res.render('produtores')
+  res.render('produtores',{usuario: req.session.usuario})
 });
 router.get('/produtor', function(req, res, next) {
-  res.render('produtor')
+  res.render('produtor',{usuario: req.session.usuario})
 });
-router.get('/carrinho', auth ,function(req, res, next) {
-  res.render('carrinho')
-});
+router.get('/carrinho', auth, carrinhoController.viewCarrinho);
+
 router.get('/homeLogado', function(req, res) {
   res.render('homeLogado')
 });
