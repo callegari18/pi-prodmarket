@@ -79,7 +79,7 @@ button,
 .subtotal:before,
 .subtotal-value:before,
 .total-value:before {
-  content: 'R$';
+  /* content: 'R$'; */
 }
 
 .hide {
@@ -252,6 +252,7 @@ aside {
   border: 1px solid #aaa;
   padding: 1rem;
   position: fixed;
+  position: sticky;
   width: 250px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

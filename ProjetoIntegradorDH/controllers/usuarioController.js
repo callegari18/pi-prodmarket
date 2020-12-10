@@ -82,9 +82,14 @@ store: async (req, res)=>{
 
     }
 
+    
+
 },
 
-
+headerLogado: async (req,res)=>{
+    const perfil = await Usuarios.findAll();
+    return res.render('header-logado', {perfil})
+}
 
 
 }

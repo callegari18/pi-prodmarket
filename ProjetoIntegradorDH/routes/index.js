@@ -6,6 +6,7 @@ var router = express.Router();
 const {check, validationResult, body } = require('express-validator');
 const contatoController = require('../controllers/contatoController');
 const categoriaController = require('../controllers/categoriaController');
+const carrinhoController = require('../controllers/carrinhoController');
 const auth = require('../middlewares/auth');
 const uploadMiddleware = require('../middlewares/upload');
 
@@ -64,9 +65,11 @@ router.get('/termos', function(req, res, next) {
 router.get('/faq', contatoController.viewFaq);
 router.post('/faq', contatoController.sendFaq);
 
-router.get('/produto', function(req, res, next) {
-  res.render('produto')
-});
+// router.get('/produto', function(req, res, next) {
+//   res.render('produto')
+// });
+
+router.get('/produto/:id', auth, produtoController.comprarProduto);
 
 router.get('/produtores', function(req, res, next) {
   res.render('produtores')
@@ -74,9 +77,8 @@ router.get('/produtores', function(req, res, next) {
 router.get('/produtor', function(req, res, next) {
   res.render('produtor')
 });
-router.get('/carrinho', auth ,function(req, res, next) {
-  res.render('carrinho')
-});
+router.get('/carrinho', auth, carrinhoController.viewCarrinho);
+
 router.get('/homeLogado', function(req, res) {
   res.render('homeLogado')
 });

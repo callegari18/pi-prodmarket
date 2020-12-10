@@ -1,4 +1,4 @@
-<%- include('partials/header.ejs'); %>
+<%- include('partials/cabecalho'); %>
 
 <main>
   <!-- inicio menu lateral, banner e cards -->
@@ -168,7 +168,7 @@
         <p><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
         <hr />
         <p>
-          <strong><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong>
+          <a class="btn btn-primary" role="button" href="/produto/<%= item.id %>">Comprar</a>
         </p>
       </div>
     </div>
@@ -178,48 +178,7 @@
   <% }) %>
 
 
-  <div class="card-deck">
-    <div class="card">
-      <img class="card-img-top" src="/images/img/limao1.jpg" alt="produto-1" />
-      <div class="card-body">
-        <p>Limão Tahiti</p>
-        <hr />
-        <p>CX 15kg</p>
-        <hr />
-        <p><strong>R$ 25,00 a CX</strong></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="/images/img/maca1.jpg" alt="produto-2" />
-      <div class="card-body">
-        <p>Maçã Argentina</p>
-        <hr />
-        <p>CX 10kg</p>
-        <hr />
-        <p><strong>R$ 32,00 a CX</strong></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="/images/img/mexirica1.jpg" alt="produto-3" />
-      <div class="card-body">
-        <p>Mexirica Poucan</p>
-        <hr />
-        <p>CX 15kg</p>
-        <hr />
-        <p><strong>R$ 22,00 a CX</strong></p>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img-top" src="/images/img/uva1.jpg" alt="produto-4" />
-      <div class="card-body">
-        <p>Uva Rosa</p>
-        <hr />
-        <p>CX 15kg</p>
-        <hr />
-        <p><strong>R$ 55,00 a CX</strong></p>
-      </div>
-    </div>
-  </div>
+
 </main>
 
 <%- include('partials/footer.ejs'); %>
