@@ -3,7 +3,7 @@ const {Usuarios} = require("../models")
 
 const loginController = {
     loginview: (req, res) => {
-        return res.render('login')
+        return res.render('login',{usuario: req.session.usuario})
     },
 
     login: async (req,res) => {

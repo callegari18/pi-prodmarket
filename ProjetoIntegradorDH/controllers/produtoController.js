@@ -4,7 +4,7 @@ const {validationResult } = require('express-validator');
 
 const produtoController={
 create:(req,res) => {
-    return res.render('cadastro_produto')
+    return res.render('cadastro_produto',{usuario: req.session.usuario})
 },
 
 // salvar:async(req, res, next) => {

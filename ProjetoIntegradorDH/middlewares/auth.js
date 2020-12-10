@@ -14,7 +14,7 @@ function auth(req, res, next){
         telefone: '123456789',
         email: 'pedrov-queiroz@hotmail.com',
         password: undefined,
-        imagem: null,
+        imagem: '386551d7dda0a043-profile.jpg',
         responsavel: 'Pedro',
         createdAt: '2020-12-07T17:14:30.000Z',
         updatedAt: '2020-12-07T17:14:30.000Z'

@@ -73,9 +73,10 @@
 
                                         <li class="dropdown">
                                             <a href="#" data-toggle="dropdown" class="dropdown-toggle user-action"
-                                                style="color: #47967f;"><img
-                                                    src="https://www.tutorialrepublic.com/examples/images/avatar/2.jpg"
-                                                    class="avatar" alt="Avatar"> Paula Wilson <b class="caret"></b></a>
+                                                style="color: #47967f;">
+                                                <div class="fotoPerfil avatar" alt="Avatar"><img src="/uploads/<%= usuario.imagem %>" style=border-radius:50px;>
+                                                    
+                                                </div><b><a><%= usuario.nome %><b class="caret"></b></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="editar_cadastro" style="color: #47967f;"><i
                                                             class="fa fa-user-o"></i> Perfil</a>
@@ -86,7 +87,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a href="#" class="notifications" style="color: #47967f;"><i
+                                        <li><a href="carrinho" class="notifications" style="color: #47967f;"><i
                                                     class="fa fa-shopping-cart"
                                                     style="font-size: 30px;color: #246752;"></i><span
                                                     class="badge">1</span></a>

@@ -13,7 +13,7 @@ viewCategoria: async (req, res) => {
 
     console.log(card)
 
-return res.render('categoria', {card, categoria});
+return res.render('categoria', {card, categoria,usuario: req.session.usuario});
 
 }
 }
