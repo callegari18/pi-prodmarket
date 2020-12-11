@@ -1,0 +1,99 @@
+
+  .container-parceiros {
+    width: 100%;
+    margin: 20px auto;
+   }
+
+  .column-forn{
+    margin-left: 30px;
+    width: 50%;
+    padding:20px;
+    display: inline-block;
+  }
+
+  .column-transp{
+    width: 50%;
+    padding:20px;
+    display: inline-block;
+  }
+
+  .middle {
+    background-color:#246752;
+    height: 3px;
+  }
+
+  .heading {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #246752;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+  }
+  
+  .card {
+    width: 20%;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 50px;
+    transition: 0.3s;
+  }
+  
+  .card-header {
+    text-align: center;
+    padding: 50px 10px;
+    background:#68b4a6;
+    color: #fff;
+  }
+  
+  .card-body {
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .card-body .btn {
+    display: block;
+    color: #fff;
+    text-align: center;
+    background: #68b4a6;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 10px 5px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  }
+  
+.imgCardProdutor{
+  
+  height: 253px;
+}
+
+  @media screen and (max-width: 1000px) {
+    .card {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 620px) {
+    .container {
+      width: 100%;
+    }
+  
+    .heading {
+      padding: 20px;
+      font-size: 20px;
+    }
+  
+    .card {
+      width: 80%;
+    }
+  }

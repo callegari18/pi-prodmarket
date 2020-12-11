@@ -1,0 +1,50 @@
+
+
+     <%- include('partials/cabecalho.ejs'); %>
+
+    <main>
+        <container>
+
+                <div class="container-faq">
+                    <h1><strong>FAQ</strong></h1>
+                      <hr class="middle" /> 
+                <div class="faq">
+                    
+                    <div class="questions col-md-8">
+                        <div class="pgt">
+                        <h2><strong>PERGUNTAS FREQUENTES</strong></h2>
+                        <p>Não recebi meu pedido. O que faço?</p>
+                        <p>Como receberei meu remmbolso?</p>
+                        <p>Por que meu pedido foi finalizado?</p>
+                        <p>Como cancelar meu pedido?</p>
+                        <p>Como rastrear meu pedido?</p>
+                        <p>Como entrar em contato com o vendedor?</p>
+                    </div>
+                    </div>
+
+                <div class="form-faq col-md-4">
+                    <form action="faq" method="POST">
+                        <h2>Não Encontrou sua Resposta?</h2> <br>
+
+                        <input type="text" name="nome" placeholder="Digite seu Nome" autocomplete="none" required>
+
+                        <br><br>
+
+                        <input type="email" name="email" placeholder="Digite seu E-mail" autocomplete="none" required>
+
+                        <br><br>
+
+                        <textarea cols="30" rows="6" name="comentario" placeholder="Digite sua Dúvida" required></textarea>
+                        
+                        <br><br>
+
+                        <button class="botaoEmail" onclick = >Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </container>
+    </main>
+  
+
+
+    <%- include('partials/footer.ejs'); %>

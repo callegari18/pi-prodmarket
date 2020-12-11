@@ -1,0 +1,183 @@
+<%- include('partials/cabecalho'); %>
+
+<main>
+  <!-- inicio menu lateral, banner e cards -->
+  <div class="row">
+    <!-- inicio menu lateral -->
+    <div class="col-md-3 menuLateral">
+      <div class="categoria">
+        <div>
+          <h1>Categorias</h1>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="Aves"><img src="/images/img/icon/ico-aves.svg" /> Aves </a>
+            </li>
+            <li class="nav-item">
+              <a href="Bovinos"><img src="/images/img/icon/ico-bovinos.svg" /> Bovinos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Caprinos"><img src="/images/img/icon/ico-caprinos.svg" /> Caprinos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Cereais"><img src="/images/img/icon/ico-cereais.svg" /> Cereais
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Cogumelos"><img src="/images/img/icon/ico-cogumelos.svg" /> Cogumelos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Especiarias"><img src="/images/img/icon/ico-especiarias.svg" /> Especiarias
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Frutas"><img src="/images/img/icon/ico-frutas.svg" /> Frutas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Frutos do Mar"><img src="/images/img/icon/ico-frutos-do-mar.svg" /> Frutos do
+                Mar</a>
+            </li>
+            <li class="nav-item">
+              <a href="Grãos"><img src="/images/img/icon/ico-graos.svg" /> Grãos </a>
+            </li>
+            <li class="nav-item">
+              <a href="Hortaliças"><img src="/images/img/icon/ico-hortalicas.svg" /> Hortalicas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="legumes"><img src="/images/img/icon/ico-legumes.svg" /> Legumes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="Leite e Derivados"><img src="/images/img/icon/ico-leites-e-derivados.svg" /> Leite
+                e Derivados
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="mel"><img src="/images/img/icon/ico-mel.svg" /> Mel </a>
+            </li>
+            <li class="nav-item">
+              <a href="oleosAzeites"><img src="/images/img/icon/ico-oleos-e-azeites.svg" /> Oleos e
+                Azeites
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="peixes"><img src="/images/img/icon/ico-peixes.svg" /> Peixes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="suinos"><img src="/images/img/icon/ico-suinos.svg" /> Suinos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="raizes"><img src="/images/img/icon/ico-raizes.svg" /> Raizes
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- fim menu lateral -->
+    <!-- inicio conteudo -->
+    <div class="col-md-9">
+      <!-- inicio banner -->
+      <div id="banner-institucional" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/images/img/banner-home01.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/img/banner-home02.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/img/banner-home03.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/img/banner-home04.jpg" alt="Fourth slide">
+          </div>
+        </div>
+      </div>
+      <!-- fim banner -->
+      <!-- inicio cards -->
+      <div class="row">
+        <div class="cartao">
+          <!-- card-1 -->
+          <div class="card-produtor imgCardProd" style="width: 11rem">
+            <img src="/images/img/produtor-1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2 class="card-title">Fazenda Novo Horizonte</h2>
+              <a href="produtor" class="btn">Saiba mais</a>
+            </div>
+          </div>
+          <!-- card-2 -->
+          <div class="card-produtor imgCardProd" style="width: 11rem">
+            <img src="/images/img/produtor-2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2 class="card-title">Chacara Sol Nascente</h2>
+              <a href="produtor" class="btn">Saiba mais</a>
+            </div>
+          </div>
+          <!-- card-3 -->
+          <div class="card-produtor imgCardProd" style="width: 11rem">
+            <img src="/images/img/produtor-1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2 class="card-title">Fazenda Nova Gaia Zelandia</h2>
+              <a href="produtor" class="btn">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="produtores" class="mais-produtores">
+        <p>Mais Produtores</p>
+      </a>
+      <!-- fim cards -->
+    </div>
+    <!-- fim conteudo -->
+  </div>
+  <!-- fim menu lateral, banner e cards -->
+  <!-- inicio vitrine -->
+  <hr class="middle" />
+
+  <strong>Produtos</strong>
+
+  <select class="filter">
+    <option>A-Z</option>
+    <option>Z-A</option>
+    <option>Menor Preço</option>
+    <option>Maior Preço</option>
+  </select>
+<label class="filter">Ordenar por:</label>
+
+  <!-- inicio cards -->
+  <div class="row">
+    <% card.forEach((item,index) => { %>
+      <% let indice=5%>
+      <% if (index%4==0||index==0){ %>
+        <div class="cartao">
+        <% } %>
+        <div class="card-produtor" style="width: 15rem">
+          <img class="card-img-top imgCardProdutor" src="/uploads/<%= item.imagem %>" alt="produto-1" />
+          <div class="card-body"> 
+            <p><%= item.nome%> <%= item.tipo%></p>
+        <hr />
+        <p><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
+        <hr />
+        <p>
+          <a class="btn btn-primary" role="button" href="/produto/<%= item.id %>">Comprar</a>
+        </p>
+          </div>
+        </div>
+        <% if (index%4==3||index==card.length-1){ %>
+      </div>
+      <% } %>
+      <% }) %>
+  </div> 
+</div>
+
+<!-- fim cards -->
+</main>
+
+<%- include('partials/footer.ejs'); %>

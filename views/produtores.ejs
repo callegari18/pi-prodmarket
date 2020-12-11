@@ -1,0 +1,29 @@
+<%- include('partials/cabecalho.ejs'); %>
+
+        <div class="heading tituloProdutor">
+          <h1>Produtores</h1>
+        </div>
+        <hr class="middle" />
+        <!-- inicio cards -->
+        <div class="row">
+            <% card.forEach((item,index) => { %>
+              <% let indice=5%>
+              <% if (index%4==0||index==0){ %>
+                <div class="cartao">
+                <% } %>
+                <div class="card-produtor" style="width: 11rem">
+                  <img class="card-img-top imgCardProdutor" src="/uploads/<%= item.imagem %>" alt="produto-1" />
+                  <div class="card-body"> 
+                    <h2 class="card-title"><%= item.nome%></h2>
+                    <a href="produtor" class="btn">Saiba mais</a>
+                  </div>
+                </div>
+                <% if (index%4==3||index==card.length-1){ %>
+              </div>
+              <% } %>
+              <% }) %>
+          </div> 
+        </div>
+        
+        <!-- fim cards -->
+          <%- include('partials/footer.ejs'); %>

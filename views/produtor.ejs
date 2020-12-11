@@ -1,0 +1,55 @@
+<%- include('partials/cabecalho.ejs'); %>
+
+    <h1><%=usuario.nome_fantasia%></h1>
+
+    <!-- inicio vitrine -->
+    <hr class="middle" />
+
+    <div class="information">
+      <p>Rua: <%=endereco.logradouro%>  - Bairro: <%=endereco.cidade%></p>
+      <p>CEP:<%=endereco.cep%></p>
+      <p>Telefone: <%= usuario.telefone %></p>
+    </div>
+    <div class="frutas">
+      <strong>Minha Loja</strong>
+      <select class="filter">
+        <option>A-Z</option>
+        <option>Z-A</option>
+        <option>Menor Preço</option>
+        <option>Maior Preço</option>
+      </select>
+<label class="filter">Ordenar por:</label>
+     
+<!-- inicio cards -->
+
+<div class="row">
+  <% listaProduto.forEach((item,index) => { %>
+    <% let indice=5%>
+    <% if (index%4==0||index==0){ %>
+      <div class="cartao">
+      <% } %>
+      <div class="card-produtor" style="width: 15rem">
+        <img class="card-img-top imgCardProdutor" src="/uploads/<%= item.imagem %>" alt="produto-1" />
+        <div class="card-body"> 
+          <p><%= item.nome%> <%= item.tipo%></p>
+      <hr />
+      <p><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
+      <hr />
+      <p>
+        <a class="btn btn-primary" role="button" href="/produto/<%= item.id %>">Comprar</a>
+      </p>
+        </div>
+      </div>
+      <% if (index%4==3||index==listaProduto.length-1){ %>
+    </div>
+    <% } %>
+    <% }) %>
+</div> 
+</div>
+
+<!-- fim cards -->
+      
+
+      
+      </main>
+      <%- include('partials/footer.ejs'); %>

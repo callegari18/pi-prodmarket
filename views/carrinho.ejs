@@ -1,0 +1,121 @@
+<%- include('partials/cabecalho.ejs'); %>
+
+      <main class="cont-carrinho">
+        <div class="heading">
+          <h1>Carrinho</h1>
+          <hr class="middle" />
+        </div>
+        <div class="basket">
+          <div class="basket-labels">
+            <ul>
+              <li class="item item-heading">Item</li>
+              <li class="price">Preço</li>
+              <li class="quantity">Quantidade</li>
+              <li class="subtotal">Subtotal</li>
+            </ul>
+          </div>
+
+          <% let total = 0 %>
+       
+      
+          <% carrinho.forEach((item,index) => { %>
+
+          <% total += Number(item.valor) %>
+          <% const valor = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor) %>
+
+          <div class="basket-product">
+            <div class="item">
+              <div class="product-image">
+                <img src="/uploads/<%= item.imagem%>" alt="" class="product-frame">
+              </div>
+              <div class="product-details">
+                <h2><strong><%= item.usuarios.nome_fantasia %></strong></h2>
+                <p><strong><%= item.nome%> <%=item.tipo %></strong></p>
+              </div>
+            </div>
+            <div class="price"><p><%= valor %></strong></p></div>
+            <div class="quantity">
+              <input type="number" id="quantity" value="1" min="1" class="quantity-field" oninput="atualizaSubtotal(event)">
+            </div>
+
+            <input type="text" readonly disabled class="subtotal d-inline-block" value="<%= valor %>" id="<%= index %>" />
+            <div class="remove">
+              <button>Remover</button>
+            </div>
+            <div class="add">
+              <a href="/"><button>Adicionar mais Produtos</button></a>
+            </div>
+          </div>
+
+          <% }) %>
+
+        </div>
+        <aside>
+          <div class="summary">
+            <div class="summary-total-items"><span class="total-items"></span>Sumário dos Pedidos</div>
+            <div class="summary-subtotal">
+              <div class="subtotal-title">Subtotal</div>
+              <div class="subtotal-value final-value" id="basket-subtotal"><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total) %></div>
+              <div class="subtotal-title">Envio</div>
+              <div class="subtotal-value final-value" id="basket-delivery">Ver com o parceiro abaixo</div>
+            </div>
+            <div class="summary-delivery">
+              <select name="delivery-collection" class="summary-delivery-selection">
+                  <option value="0" selected="selected">FRETE</option>
+                 <option value="frete-fornecedor">Atraves do Fornecedor</option>
+                 <option value="frete-parceiro">Atraves de Transportadora Parceira</option>
+              </select>
+            </div>
+            <div class="summary-total">
+              <div class="total-title">Total</div>
+              <div class="total-value final-value" id="basket-total"><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total) %></div>
+            </div>
+            <div class="summary-checkout">
+              <button class="checkout-cta">COMPRAR</button>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <%- include('partials/footer.ejs'); %>
+
+      <script>
+        function atualizaTotal() {
+          const subtotais = document.querySelectorAll('input.subtotal');
+
+          const subtotalValue = document.querySelector('.subtotal-value.final-value')
+          const subtotalFinal = document.querySelector('.total-value.final-value')
+          let valor = 0;
+
+          subtotais.forEach(subtotal => {
+            
+            const newValue = parseFloat(subtotal.value.slice(3).replace(',', '.'));
+
+            valor += newValue;
+          });
+
+          const valorFront = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor.toFixed(2))
+
+          subtotalValue.innerText = valorFront;
+          subtotalValue.setAttribute('value', valorFront);
+          subtotalFinal.innerText = valorFront;
+          subtotalFinal.setAttribute('value', valorFront);
+        }
+
+
+        function atualizaSubtotal(event) {
+          const quantidade = Number(event.target.value)
+          event.target.setAttribute('value', quantidade);
+
+          const valorUnitario = event.target.parentNode.parentNode.querySelector(".price").innerText;
+          const newValue = Number(valorUnitario.slice(3));
+          const inputAtualizar = event.target.parentNode.parentNode.querySelector("input[readonly]");
+
+          const novoSubvalor = newValue * quantidade;
+          const sub = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(novoSubvalor.toFixed(2))
+          inputAtualizar.setAttribute('value', sub)
+          inputAtualizar.innerText = sub;
+
+          atualizaTotal();
+        }
+      </script>

@@ -1,0 +1,90 @@
+<%- include('partials/cabecalho.ejs'); %>
+
+
+
+<h1 class="Cadastro">Editar Produto <span class="Prod">Prod</span><span class="Market">Market</span>
+</h1>
+
+<% if (typeof(errors) != "undefined") { %>
+    <p id="paragafoError">ERRO NO EDITAR PRODUTO</p>
+    <ol>
+
+        <% errors.forEach((error) => { %>
+            
+            <li id="errorCadastro"><%= error.msg %> </li>
+
+        <% }); %>     
+
+    </ol>
+<% } %> 
+
+
+<hr>
+
+<form class="form-prod" action="/editar/<%= editproduto.id %>" method="POST" enctype="multipart/form-data">
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="descricao">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="<%= editproduto.nome %> " placeholder="Nome do Produto">
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="qunatidade">Quantidade</label>
+            <input type="text" class="form-control" id="quantidade" name="quantidade" value="<%= editproduto.quantidade %>" placeholder="CX 10 Kg">
+        </div>
+
+        <div class="form-group col-md-3">
+            <label for="categoria" class="col-sm-3 control-label">Categoria</label>
+            <div class="col-auto">
+                <select name="categoria" id="categoria" value="<%= editproduto.categoria %>" class="form-control">
+
+                    <option value="Aves">Aves</option>
+                    <option value="Bovinos">Bovinos</option>
+                    <option value="Caprinos">Caprinos</option>
+                    <option value="Cereais">Cereais</option>
+                    <option value="Cogumelos">Cogumelos</option>
+                    <option value="Especiarias">Especiarias</option>
+                    <option value="Frutas">Frutas</option>
+                    <option value="Frutos do Mar">Frutos do Mar</option>
+                    <option value="Grãos">Grãos</option>
+                    <option value="Hortaliças">Hortaliças</option>
+                    <option value="Legumes">Legumes</option>
+                    <option value="Leites e Derivados">Leites e Derivados</option>
+                    <option value="Mel">Mel</option>
+                    <option value="Óleos e Azeites">Óleos e Azeites</option>
+                    <option value="Peixes">Peixes</option>
+                    <option value="Suínos">Suínos</option>
+                    <option value="Raízes">Raízes</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="codigo_produto">Tipo</label>
+            <input type="text" class="form-control" id="tipo" name="tipo" value="<%= editproduto.tipo %>" placeholder="EX: Galinha Caipira / Alface Americana">
+            <br>
+            <label for="valor">Valor (R$)</label>
+            <input type="text" class="form-control" id="valor" name="valor" value="<%= editproduto.valor %>" placeholder="Digite o Valor do Produto">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputImagem">Cadastrar Imagem <br>( Tamanho mínimo 400x400px, formato JPG
+                )</label>
+            <input type="file" id="inputImagem" name="photo"  value="<%= editproduto.imagem %>" required>
+        </div>
+    </div>
+
+    <div class="form-group col-md-2">
+        <button type="submit" class="btn btn-primary">Editar Item</button>
+    </div>
+
+</form>
+
+<%- include('partials/footer.ejs'); %>
