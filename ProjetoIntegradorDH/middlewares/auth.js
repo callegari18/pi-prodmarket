@@ -6,7 +6,7 @@ function auth(req, res, next){
         nome: 'Pedro Victor',
         cnpj: '2134321421234234',
         ie: '2342342342',
-        nome_fantasia: 'Pedro',
+        nome_fantasia: 'Fazenda Nova Gaia',
         ramo: '23421342134',
         codigo_ap: '123456789',
         codigo_as: '123456789',
@@ -20,7 +20,7 @@ function auth(req, res, next){
         updatedAt: '2020-12-07T17:14:30.000Z'
     };
 
-    // req.session.carrinho = [
+    // req.session.produto = [
     //     {
     //       id: 1,
     //       categoria: 'Aves',
@@ -85,7 +85,7 @@ function auth(req, res, next){
     //         updatedAt: '2020-12-09T20:49:30.000Z'
     //       }
     //     }
-    //   ]
+    // ]
 
     if(typeof(req.session.usuario)!="undefined"){
         next()

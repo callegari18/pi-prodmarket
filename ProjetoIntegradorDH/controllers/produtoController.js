@@ -81,21 +81,26 @@ editarProduto: async (req, res) => {
     // const card = await Produtos.findByPk(id);
     // return res.render('editar', {card, usuario: req.session.usuario})
 
-     const {id} = req.params;
-    console.log("esse e o id =", id)
-    const editproduto = await Produtos.findOne({WHERE: {id:id}});
-    return res.render('/editar', {editproduto})
+    const { id } = req.params;
+    const { usuario } = req.session;
+
+    const editproduto = await Produtos.findOne({ where: { id } });
+
+    return res.render('editar', { editproduto, usuario })
 },
 atualizaProduto: async (req, res) => {
     const {id} = req.params;
     const dados = req.body;
-    const produto = await Produtos.update(dados, {where: {id}});
-    return res.redirect('/editar')
+    dados.imagem = req.file.filename;
+
+    await Produtos.update(dados, {where: {id}});
+
+    return res.redirect(`/editar/${id}`)
 },
 destroy: async (req, res) =>{
     const {id} = req.params
     console.log({id})
-    const resultado = await Produtos.destroy({
+    await Produtos.destroy({
     where: {id:id}
 })
 

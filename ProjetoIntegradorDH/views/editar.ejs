@@ -21,7 +21,7 @@
 
 <hr>
 
-<form class="form-prod" action="editar" method="POST" enctype="multipart/form-data">
+<form class="form-prod" action="/editar/<%= editproduto.id %>" method="POST" enctype="multipart/form-data">
 
 
     <div class="form-row">
@@ -77,7 +77,7 @@
         <div class="form-group col-md-6">
             <label for="inputImagem">Cadastrar Imagem <br>( Tamanho mínimo 400x400px, formato JPG
                 )</label>
-            <input type="file" id="inputImagem" name="photo"  value="<%= editproduto.imagem %>">
+            <input type="file" id="inputImagem" name="photo"  value="<%= editproduto.imagem %>" required>
         </div>
     </div>
 
