@@ -1,7 +1,7 @@
 function auth(req, res, next){
     console.log("NÃO ESQUEÇA DE LIMPAR O SESSION!!!!!!!")
     req.session.usuario = {
-        id: 1,
+        id: 2,
         tipo: 'Comprar,Vender',
         nome: 'Pedro Victor',
         cnpj: '2134321421234234',

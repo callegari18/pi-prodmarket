@@ -27,7 +27,10 @@ td {
             <td><%= listaProduto.nome %> <%= listaProduto.tipo %></td>
             <td><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(listaProduto.valor)%></td>
             <td>
-                <a href="editar"><button>EDITAR</button></a> 
+                <form action="/editar/<%= listaProduto.id %>" method="POST">
+                    <button>EDITAR</button>
+                    </form>
+               
                
                <form action="/produto/<%= listaProduto.id %>/eliminar?_method=DELETE" method="POST">
             <button>DELETAR</button>
