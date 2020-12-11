@@ -1,24 +1,12 @@
-const {Produtos}=require('../models');
+const {Produtos, Enderecos }=require('../models');
 const {validationResult } = require('express-validator');
+
 
 
 const produtoController={
 create:(req,res) => {
     return res.render('cadastro_produto',{usuario: req.session.usuario})
 },
-
-// salvar:async(req, res, next) => {
-//     //let form=(req.body)
-//     console.log("dados:",req.body)
-// }
-
-/*salvar: async (req, res) => {
-    // Pegar os dados da requisição
-    // Jogar os dados no banco
-    // Redirecionar
-    const dados = req.body;
-    console.log("DADOS", dados);
-   const result = await usuarios.create(dados);*/
 
 store: async (req, res)=>{
     const listaDeErrors = validationResult(req);
@@ -79,6 +67,48 @@ comprarProduto: async (req, res) => {
     }
 
     return res.redirect('/carrinho');
+},
+
+listaProduto: async (req,res)=>{
+    const {id} = req.session.usuario;
+    console.log("o id do usuario e :", id);
+    const listaProduto = await Produtos.findAll({ 
+        where: { Usuarios_id: id }
+    });
+    return res.render('editar_produto', {listaProduto, usuario: req.session.usuario})
+},
+editarProduto: async (req, res) => {
+    const {id} = req.params;
+    const produto = await Produtos.findByPk(id);
+    return res.render('/editar_produto', {produto})
+},
+atualizaProduto: async (req, res) => {
+    const {id} = req.params;
+    const dados = req.body;
+    const produto = await Produtos.update(dados, {where: {id}});
+    return res.redirect('/editar_produto')
+},
+destroy: async (req, res) =>{
+    const {id} = req.params
+    console.log({id})
+    const resultado = await Produtos.destroy({
+    where: {id:id}
+})
+
+res.redirect('/editar_produto');
+},
+
+
+minhaLoja: async (req,res)=>{
+    const {id} = req.session.usuario;
+    console.log("o id do usuario e :", id);
+    const endereco = await Enderecos.findOne({
+        where: { Usuarios_id: id }
+    });
+    const listaProduto = await Produtos.findAll({ 
+        where: { Usuarios_id: id }
+    });
+    return res.render('produtor', {listaProduto, endereco, usuario: req.session.usuario})
 }
 
 }

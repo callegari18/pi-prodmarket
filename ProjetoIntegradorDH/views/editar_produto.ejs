@@ -1,0 +1,43 @@
+<%- include('partials/cabecalho.ejs'); %>
+<style>
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-bottom: 6px;
+}
+
+td {
+    
+    width: 220px;
+    height:80px;
+}
+</style>
+<table >
+    <tr>
+        <th>Imagem</th>
+        <th>Nome-tipo</th>
+        <th>preço</th>
+        <th>Ações</th>
+    </tr>
+    <% listaProduto.forEach((listaProduto) => { %>
+        <tr>
+
+            <td><img src="/uploads/<%= listaProduto.imagem %>"  height="auto"></td>
+            <td><%= listaProduto.nome %> <%= listaProduto.tipo %></td>
+            <td><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(listaProduto.valor)%></td>
+            <td>
+                <a href="editar"><button>EDITAR</button></a> 
+               
+               <form action="/produto/<%= listaProduto.id %>/eliminar?_method=DELETE" method="POST">
+            <button>DELETAR</button>
+            </form>
+            </td>
+        </tr>            
+    <% }) %>
+
+</table>
+
+
+<%- include('partials/footer.ejs'); %>
+

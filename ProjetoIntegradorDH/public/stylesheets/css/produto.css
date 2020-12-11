@@ -11,6 +11,7 @@ a.button-product {
 
 .card {
     cursor:default;
+    
 } 
 
 a.button-product:hover {
@@ -41,3 +42,9 @@ a.button-product:hover{
     background: #68b4a6;
     color: #fff;
 }
+
+.imgCardProd img {
+
+height: 253px;
+}
+

@@ -105,7 +105,7 @@
       <div class="row">
         <div class="cartao">
           <!-- card-1 -->
-          <div class="card-produtor" style="width: 11rem">
+          <div class="card-produtor imgCardProd" style="width: 11rem">
             <img src="/images/img/produtor-1.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h2 class="card-title">Fazenda Novo Horizonte</h2>
@@ -113,7 +113,7 @@
             </div>
           </div>
           <!-- card-2 -->
-          <div class="card-produtor" style="width: 11rem">
+          <div class="card-produtor imgCardProd" style="width: 11rem">
             <img src="/images/img/produtor-2.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h2 class="card-title">Chacara Sol Nascente</h2>
@@ -121,10 +121,10 @@
             </div>
           </div>
           <!-- card-3 -->
-          <div class="card-produtor" style="width: 11rem">
-            <img src="/images/img/produtor-3.jpg" class="card-img-top" alt="..." />
+          <div class="card-produtor imgCardProd" style="width: 11rem">
+            <img src="/images/img/produtor-1.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h2 class="card-title">Fazenda Nova Gaia</h2>
+              <h2 class="card-title">Fazenda Nova Gaia Zelandia</h2>
               <a href="#" class="btn">Saiba mais</a>
             </div>
           </div>
@@ -149,36 +149,35 @@
     <option>Menor Preço</option>
     <option>Maior Preço</option>
   </select>
+<label class="filter">Ordenar por:</label>
 
-  <p class="filter">Ordenar por:</p>
-
-
-
-  <% card.forEach((item,index) => { %>
-  <% let indice=5%>
-
-  <% if (index%4==0||index==0){ %>
-  <div class="card-deck">
-    <% } %>
-    <div class="card">
-      <img class="card-img-top" src="/uploads/<%= item.imagem %>" alt="produto-1" />
-      <div class="card-body">
-        <p><%= item.nome%> <%= item.tipo%></p>
+  <!-- inicio cards -->
+  <div class="row">
+    <% card.forEach((item,index) => { %>
+      <% let indice=5%>
+      <% if (index%4==0||index==0){ %>
+        <div class="cartao">
+        <% } %>
+        <div class="card-produtor" style="width: 15rem">
+          <img class="card-img-top imgCardProdutor" src="/uploads/<%= item.imagem %>" alt="produto-1" />
+          <div class="card-body"> 
+            <p><%= item.nome%> <%= item.tipo%></p>
         <hr />
         <p><%= new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.valor)%></strong></p>
         <hr />
         <p>
           <a class="btn btn-primary" role="button" href="/produto/<%= item.id %>">Comprar</a>
         </p>
+          </div>
+        </div>
+        <% if (index%4==3||index==card.length-1){ %>
       </div>
-    </div>
-    <% if (index%4==3||index==card.length-1){ %>
-  </div>
-  <% } %>
-  <% }) %>
+      <% } %>
+      <% }) %>
+  </div> 
+</div>
 
-
-
+<!-- fim cards -->
 </main>
 
 <%- include('partials/footer.ejs'); %>

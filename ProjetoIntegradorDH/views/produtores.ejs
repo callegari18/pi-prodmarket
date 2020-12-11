@@ -6,43 +6,22 @@
         <hr class="middle" />
         <!-- inicio cards -->
         <div class="row">
-          <div class="cartao">
-            <!-- card-1 -->
-            <div class="card-produtor" style="width: 11rem">
-              <img
-                src="/images/img/produtor-1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h2 class="card-title">Fazenda Novo Horizonte</h2>
-                <a href="#" class="btn">Saiba mais</a>
+            <% card.forEach((item,index) => { %>
+              <% let indice=5%>
+              <% if (index%4==0||index==0){ %>
+                <div class="cartao">
+                <% } %>
+                <div class="card-produtor" style="width: 11rem">
+                  <img class="card-img-top imgCardProdutor" src="/uploads/<%= item.imagem %>" alt="produto-1" />
+                  <div class="card-body"> 
+                    <h2 class="card-title"><%= item.nome%></h2>
+                    <a href="produtor" class="btn">Saiba mais</a>
+                  </div>
+                </div>
+                <% if (index%4==3||index==card.length-1){ %>
               </div>
-            </div>
-            <!-- card-2 -->
-            <div class="card-produtor" style="width: 11rem">
-              <img
-                src="/images/img/produtor-2.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h2 class="card-title">Chacara Sol Nascente</h2>
-                <a href="#" class="btn">Saiba mais</a>
-              </div>
-            </div>
-            <!-- card-3 -->
-            <div class="card-produtor" style="width: 11rem">
-              <img
-                src="/images/img/produtor-3.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h2 class="card-title">Fazenda Nova Gaia</h2>
-                <a href="#" class="btn">Saiba mais</a>
-              </div>
-            </div>
+              <% } %>
+              <% }) %>
           </div> 
         </div>
         

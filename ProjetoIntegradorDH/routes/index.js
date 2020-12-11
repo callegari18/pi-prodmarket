@@ -71,17 +71,20 @@ router.post('/faq', contatoController.sendFaq);
 
 router.get('/produto/:id', auth, produtoController.comprarProduto);
 
-router.get('/produtores', function(req, res, next) {
-  res.render('produtores',{usuario: req.session.usuario})
-});
-router.get('/produtor', function(req, res, next) {
-  res.render('produtor',{usuario: req.session.usuario})
-});
+router.get('/lista_editar_produto/', auth, produtoController.listaProduto);
+router.get('editar/:id', auth, produtoController.editarProduto);
+// router.put('editar/:id', auth, produtoController.atualizaProduto);
+router.delete('/produto/:id/eliminar', auth, produtoController.destroy);
+
+router.get('/produtores', usuarioController.produtoresCard);
+
+router.get('/produtor',  auth, produtoController.minhaLoja);
 router.get('/carrinho', auth, carrinhoController.viewCarrinho);
 
 router.get('/logout', auth, loginController.logout);
 
 router.get('/:categoria', categoriaController.viewCategoria);
+
 
 
 

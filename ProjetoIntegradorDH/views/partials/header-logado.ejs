@@ -33,7 +33,7 @@
                 <div class="col-md-12">
                     <div class="bs-example">
                         <nav class="navbar navbar-expand-md navbar-light ">
-                            <a href="/" class="navbar-brand"><img src="/images/img/logo-prod_market.png" height="150px" width="50px"></a>
+                            <div class="logoHeaderLogado" alt="Avatar"><a href="/" class="navbar-brand"><img src="/images/img/logo-prod_market.png"></a></div>
                             <button type="button" class="navbar-toggler" data-toggle="collapse"
                                 data-target="#navbarCollapse">
                                 <span class="navbar-toggler-icon"></span>
@@ -45,13 +45,13 @@
                                     <div class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Serviços</a>
                                         <div class="dropdown-menu">
-                                            <li><a href="editar_produto" style="color: black;">Edição de Produtos</a>
+                                            <li><a href="lista_editar_produto" style="color: black;">Edição de Produtos</a>
                                             </li>
                                             <li><a href="cadastro_produto" style="color: black;">Cadastrar Produtos</a>
                                             </li>
                                         </div>
                                     </div>
-                                    <a href="#" class="nav-item nav-link">Minha Loja</a>
+                                    <a href="produtor" class="nav-item nav-link">Minha Loja</a>
                                 </div>
                                 <form class="form-inline">
                                     <div class="input-group">
@@ -70,12 +70,14 @@
                                                     class="fa fa-envelope-o"></i><span class="badge">10</span></a>
                                         </li>
 
-                                        <li class="dropdown">
-                                            <a href="#" data-toggle="dropdown" class="dropdown-toggle user-action"
+                                        <li class="fotoPerfil dropdown">
+                                                                                      
+                                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle user-action"
                                                 style="color: #47967f;">
-                                                <div class="fotoPerfil avatar" alt="Avatar"><img src="/uploads/<%= usuario.imagem %>" style=border-radius:50px;>
-                                                    
-                                                </div><b><a><%= usuario.nome %><b class="caret"></b></a>
+                                                <div class="fotoPerfil avatar" alt="Avatar">  <img src="/uploads/<%= usuario.imagem %>"></div>
+                                                  <br>  
+                                                <%= usuario.nome %><b class="caret"></b></a>
+                                            
                                             <ul class="dropdown-menu">
                                                 <li><a href="editar_cadastro" style="color: #47967f;"><i
                                                             class="fa fa-user-o"></i> Perfil</a>

@@ -322,13 +322,21 @@ aside {
   width: 100%;
 }
 
-.fotoPerfil {
+
+
+.fotoPerfil img{
   border: 1px solid #aaa;
   border-radius: 50px;
   display: block;
   font-size: 0.625rem;
   height: 80px;
   width: 80px;
+  text-align: center;
+}
+
+.logoHeaderLogado{
+  display: block;
+  width: 200px;
 }
 
 @media screen and (max-width: 640px) {

@@ -72,6 +72,11 @@
     box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
   }
   
+.imgCardProdutor{
+  
+  height: 253px;
+}
+
   @media screen and (max-width: 1000px) {
     .card {
       width: 40%;

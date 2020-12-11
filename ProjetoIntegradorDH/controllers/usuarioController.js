@@ -86,6 +86,11 @@ store: async (req, res)=>{
 
 },
 
+produtoresCard: async (req,res)=>{
+    const card = await Usuarios.findAll();
+    return res.render('produtores', {card, usuario: req.session.usuario})
+},
+
 headerLogado: async (req,res)=>{
     const perfil = await Usuarios.findAll();
     return res.render('header-logado', {perfil})
